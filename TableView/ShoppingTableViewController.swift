@@ -13,10 +13,7 @@ class ShoppingTableViewController: UITableViewController {
     @IBOutlet var todoTextField: UITextField!
     @IBOutlet var addButton: UIButton!
     
-    var list: [Shopping] = [Shopping(title: "그립톡 구매하기", isDone: true, isStarred: true),
-                            Shopping(title: "사이다 구매", isDone: false, isStarred: false),
-                            Shopping(title: "아이패드 케이스 최저가 알아보기", isDone: false, isStarred: true),
-                            Shopping(title: "양말", isDone: false, isStarred: true)]
+    var list: [Shopping] = Shopping.getDummy()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +81,20 @@ class ShoppingTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let shopping = list[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingTableViewCell.identifier, for: indexPath) as? ShoppingTableViewCell
+        
         cell?.setupUI(shopping: shopping)
+        
+        // 할 일 완료 핸들링
+        cell?.checkButtonTapHadler = {
+            self.list[indexPath.row].isDone.toggle()
+            self.tableView.reloadData()
+        }
+        
+        // 즐겨찾기 핸들링
+        cell?.starButtonTapHadler = {
+            self.list[indexPath.row].isStarred.toggle()
+            self.tableView.reloadData()
+        }
         
         return cell ?? UITableViewCell()
     }
@@ -100,4 +110,11 @@ struct Shopping {
     var title: String
     var isDone: Bool
     var isStarred: Bool
+    
+    static func getDummy() -> [Self] {
+        return [Shopping(title: "그립톡 구매하기", isDone: true, isStarred: true),
+                Shopping(title: "사이다 구매", isDone: false, isStarred: false),
+                Shopping(title: "아이패드 케이스 최저가 알아보기", isDone: false, isStarred: true),
+                Shopping(title: "양말", isDone: false, isStarred: true)]
+    }
 }
