@@ -7,16 +7,16 @@
 
 import UIKit
 
-class TodoTableViewController: UITableViewController {
+class ShoppingTableViewController: UITableViewController {
     
     @IBOutlet var headerView: UIView!
     @IBOutlet var todoTextField: UITextField!
     @IBOutlet var addButton: UIButton!
     
-    var list: [Todo] = [Todo(isChecked: true, title: "그립톡 구매하기", isStarred: true),
-                        Todo(isChecked: false, title: "사이다 구매", isStarred: false),
-                        Todo(isChecked: false, title: "아이패드 케이스 최저가 알아보기", isStarred: true),
-                        Todo(isChecked: false, title: "양말", isStarred: true)]
+    var list: [Shopping] = [Shopping(title: "그립톡 구매하기", isDone: true, isStarred: true),
+                            Shopping(title: "사이다 구매", isDone: false, isStarred: false),
+                            Shopping(title: "아이패드 케이스 최저가 알아보기", isDone: false, isStarred: true),
+                            Shopping(title: "양말", isDone: false, isStarred: true)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +32,9 @@ class TodoTableViewController: UITableViewController {
             return
         }
         
-        let todo = Todo(isChecked: false, title: title, isStarred: false)
+        let shopping = Shopping(title: title, isDone: false, isStarred: false)
         
-        list.append(todo)
+        list.append(shopping)
         tableView.reloadData()
         
         todoTextField.text = ""
@@ -82,9 +82,9 @@ class TodoTableViewController: UITableViewController {
     
     // cell 디자인 및 데이터 바인딩
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let todo = list[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: TodoTableViewCell.identifier, for: indexPath) as? TodoTableViewCell
-        cell?.setupUI(todo: todo)
+        let shopping = list[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingTableViewCell.identifier, for: indexPath) as? ShoppingTableViewCell
+        cell?.setupUI(shopping: shopping)
         
         return cell ?? UITableViewCell()
     }
@@ -96,8 +96,8 @@ class TodoTableViewController: UITableViewController {
 }
 
 // MARK: - Model
-struct Todo {
-    var isChecked: Bool
+struct Shopping {
     var title: String
+    var isDone: Bool
     var isStarred: Bool
 }

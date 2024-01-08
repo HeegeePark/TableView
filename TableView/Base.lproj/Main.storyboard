@@ -225,7 +225,7 @@
         <!--쇼핑-->
         <scene sceneID="7b1-um-ZDb">
             <objects>
-                <tableViewController id="I3A-ki-dcD" customClass="TodoTableViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="I3A-ki-dcD" customClass="ShoppingTableViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="RGB-89-6BN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -273,7 +273,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodoTableViewCell" rowHeight="50" id="aoh-mf-jwI" customClass="TodoTableViewCell" customModule="TableView" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShoppingTableViewCell" rowHeight="50" id="aoh-mf-jwI" customClass="ShoppingTableViewCell" customModule="TableView" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="130" width="393" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aoh-mf-jwI" id="jIP-Tl-mMy">
@@ -327,10 +327,10 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="cellView" destination="UGA-Ba-YNj" id="62m-hs-PVF"/>
-                                    <outlet property="checkButton" destination="aTT-0t-wL4" id="Ntf-OZ-vlS"/>
-                                    <outlet property="label" destination="wKB-ea-sJt" id="2qC-lG-tld"/>
-                                    <outlet property="starButton" destination="j1W-3T-7hm" id="toh-YC-HzJ"/>
+                                    <outlet property="cellView" destination="UGA-Ba-YNj" id="oyr-qR-qON"/>
+                                    <outlet property="checkButton" destination="aTT-0t-wL4" id="ycL-qc-yqd"/>
+                                    <outlet property="label" destination="wKB-ea-sJt" id="mFD-Vz-kyB"/>
+                                    <outlet property="starButton" destination="j1W-3T-7hm" id="1cl-oQ-lt4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
