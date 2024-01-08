@@ -13,7 +13,7 @@ class ShoppingTableViewController: UITableViewController {
     @IBOutlet var todoTextField: UITextField!
     @IBOutlet var addButton: UIButton!
     
-    var list: [Shopping] = Shopping.getDummy()
+    var list: [Shopping] = UserDefaults.shoppingList
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,10 @@ class ShoppingTableViewController: UITableViewController {
         let shopping = Shopping(title: title, isDone: false, isStarred: false)
         
         list.append(shopping)
+        
+        // UserDefaults 저장
+        UserDefaults.shoppingList = list
+        
         tableView.reloadData()
         
         todoTextField.text = ""
@@ -62,7 +66,6 @@ class ShoppingTableViewController: UITableViewController {
         todoTextField.attributedPlaceholder = attributeString
         todoTextField.textColor = .black
         
-        
         // 헤더뷰 추가 버튼
         addButton.setTitle("추가", for: .normal)
         addButton.setTitleColor(.black, for: .normal)
@@ -87,13 +90,16 @@ class ShoppingTableViewController: UITableViewController {
         // 할 일 완료 핸들링
         cell?.checkButtonTapHadler = {
             self.list[indexPath.row].isDone.toggle()
+            UserDefaults.shoppingList = self.list
             self.tableView.reloadData()
         }
         
         // 즐겨찾기 핸들링
         cell?.starButtonTapHadler = {
             self.list[indexPath.row].isStarred.toggle()
+            UserDefaults.shoppingList = self.list
             self.tableView.reloadData()
+            
         }
         
         return cell ?? UITableViewCell()
@@ -102,19 +108,5 @@ class ShoppingTableViewController: UITableViewController {
     // cell 높이
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
-    }
-}
-
-// MARK: - Model
-struct Shopping {
-    var title: String
-    var isDone: Bool
-    var isStarred: Bool
-    
-    static func getDummy() -> [Self] {
-        return [Shopping(title: "그립톡 구매하기", isDone: true, isStarred: true),
-                Shopping(title: "사이다 구매", isDone: false, isStarred: false),
-                Shopping(title: "아이패드 케이스 최저가 알아보기", isDone: false, isStarred: true),
-                Shopping(title: "양말", isDone: false, isStarred: true)]
     }
 }
