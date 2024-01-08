@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I3A-ki-dcD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dm7-Da-n9W">
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -21,9 +21,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="5"/>
+            <point key="canvasLocation" x="1969" y="-1156"/>
         </scene>
-        <!--Table View Controller-->
+        <!--집중 모드-->
         <scene sceneID="XWL-cg-way">
             <objects>
                 <tableViewController id="krw-FW-KF1" sceneMemberID="viewController">
@@ -178,12 +178,13 @@
                             <outlet property="delegate" destination="krw-FW-KF1" id="hcx-kJ-E6O"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="집중 모드" id="zaJ-s5-7PH"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xac-OV-U3c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1013" y="5"/>
+            <point key="canvasLocation" x="2895.419847328244" y="-394.36619718309862"/>
         </scene>
-        <!--Setting Table View Controller-->
+        <!--설정-->
         <scene sceneID="Cfk-jA-FfR">
             <objects>
                 <tableViewController id="Vbt-Ab-Gyu" customClass="SettingTableViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -215,12 +216,13 @@
                             <outlet property="delegate" destination="Vbt-Ab-Gyu" id="Iae-Sd-2p3"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="설정" id="NIG-GV-aK6"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QRC-gz-RCg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1785" y="5"/>
+            <point key="canvasLocation" x="2895.419847328244" y="290.84507042253523"/>
         </scene>
-        <!--Todo Table View Controller-->
+        <!--쇼핑-->
         <scene sceneID="7b1-um-ZDb">
             <objects>
                 <tableViewController id="I3A-ki-dcD" customClass="TodoTableViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -337,6 +339,7 @@
                             <outlet property="delegate" destination="I3A-ki-dcD" id="1wy-Zg-OzP"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="쇼핑" id="pNd-Tr-oIw"/>
                     <connections>
                         <outlet property="addButton" destination="Rub-J6-Vrc" id="Sr8-ue-fLW"/>
                         <outlet property="headerView" destination="FZE-s0-i0b" id="5O5-ab-lOr"/>
@@ -345,12 +348,98 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSk-FV-r1b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2503.0534351145038" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="2895" y="982"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FKD-dE-7s9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q7A-R7-Nfi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="moon" catalog="system" selectedImage="moon.fill" id="xog-VY-jyV"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Eqg-5u-3D7">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="krw-FW-KF1" kind="relationship" relationship="rootViewController" id="ri7-Qh-5MQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GqI-QV-KBO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057.2519083969464" y="-394.36619718309862"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1y0-vl-8qY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8qx-iv-Yas" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="gearshape" catalog="system" selectedImage="gearshape.fill" id="o3y-80-o5q"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="soz-Id-bNc">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Vbt-Ab-Gyu" kind="relationship" relationship="rootViewController" id="Sw2-Sz-gy6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5X3-9v-iTl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057.2519083969464" y="290.84507042253523"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Cdm-Pr-gwM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OpS-nZ-qRZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="cart" catalog="system" selectedImage="cart.fill" id="9Sc-Ez-ZNc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Sy-gn-OhV">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="I3A-ki-dcD" kind="relationship" relationship="rootViewController" id="HDU-jm-SHp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FSp-So-VS5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057.2519083969464" y="981.69014084507046"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="65f-vL-qUr">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dm7-Da-n9W" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fFj-pJ-C9N">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemPurpleColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="q7A-R7-Nfi" kind="relationship" relationship="viewControllers" id="wv2-yb-uhl"/>
+                        <segue destination="8qx-iv-Yas" kind="relationship" relationship="viewControllers" id="BAw-1u-83k"/>
+                        <segue destination="OpS-nZ-qRZ" kind="relationship" relationship="viewControllers" id="whA-ST-4d1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aym-p6-ADF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1018" y="291"/>
         </scene>
     </scenes>
     <resources>
         <image name="bed.double.fill" catalog="system" width="128" height="82"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="lanyardcard.fill" catalog="system" width="108" height="128"/>
+        <image name="moon" catalog="system" width="128" height="123"/>
         <image name="moon.fill" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
