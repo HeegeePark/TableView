@@ -13,7 +13,12 @@ class ShoppingTableViewController: UITableViewController {
     @IBOutlet var todoTextField: UITextField!
     @IBOutlet var addButton: UIButton!
     
-    var list: [Shopping] = UserDefaults.shoppingList
+    @UserDefault(key: "shoppingList", defaultValue: Shopping.getDummy())
+    var shoppingList: [Shopping] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +36,8 @@ class ShoppingTableViewController: UITableViewController {
         
         let shopping = Shopping(title: title, isDone: false, isStarred: false)
         
-        list.append(shopping)
-        
         // UserDefaults 저장
-        UserDefaults.shoppingList = list
-        
-        tableView.reloadData()
+        shoppingList.append(shopping)
         
         todoTextField.text = ""
         view.endEditing(true)
@@ -77,29 +78,24 @@ class ShoppingTableViewController: UITableViewController {
     // MARK: - UITableView
     // cell 개수
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+        return shoppingList.count
     }
     
     // cell 디자인 및 데이터 바인딩
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let shopping = list[indexPath.row]
+        let shopping = shoppingList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingTableViewCell.identifier, for: indexPath) as? ShoppingTableViewCell
         
         cell?.setupUI(shopping: shopping)
         
         // 할 일 완료 핸들링
         cell?.checkButtonTapHadler = {
-            self.list[indexPath.row].isDone.toggle()
-            UserDefaults.shoppingList = self.list
-            self.tableView.reloadData()
+            self.shoppingList[indexPath.row].isDone.toggle()
         }
         
         // 즐겨찾기 핸들링
         cell?.starButtonTapHadler = {
-            self.list[indexPath.row].isStarred.toggle()
-            UserDefaults.shoppingList = self.list
-            self.tableView.reloadData()
-            
+            self.shoppingList[indexPath.row].isStarred.toggle()
         }
         
         return cell ?? UITableViewCell()

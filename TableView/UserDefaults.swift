@@ -7,11 +7,6 @@
 
 import Foundation
 
-extension UserDefaults {
-    @UserDefault(key: "shoppingList", defaultValue: Shopping.getDummy())
-    static var shoppingList: [Shopping]
-}
-
 @propertyWrapper
 struct UserDefault<T: Codable> {
     private let key: String
@@ -34,6 +29,7 @@ struct UserDefault<T: Codable> {
             return value ?? defaultValue
         }
         set {
+            print("변경되었니", newValue)
             let data = try? JSONEncoder().encode(newValue)
             
             UserDefaults.standard.set(data, forKey: key)
