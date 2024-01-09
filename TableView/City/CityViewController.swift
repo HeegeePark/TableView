@@ -7,19 +7,43 @@
 
 import UIKit
 
+enum CityType: String, CaseIterable {
+    case all = "모두"
+    case domestic = "국내"
+    case abroad = "해외"
+    
+    var cityList: [City] {
+        let list = City.getDummy()
+        switch self {
+        case .all:
+            return list
+        case .domestic:
+            return list.filter { $0.domesticTravel }
+        case .abroad:
+            return list.filter { !$0.domesticTravel }
+        }
+    }
+}
+
 class CityViewController: UIViewController {
 
     @IBOutlet var citySegmentControl: UISegmentedControl!
     @IBOutlet var collectionView: UICollectionView!
     
     let deviceWidth = UIScreen.main.bounds.width
-    let cityList: [City] = City.getDummy()
-    var cellWidth: CGFloat = 0
+    var cityType: CityType = .all
+    var cityList: [City] = [] {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        cityList = self.cityType.cityList
         setCollectionView()
+        setSegmentControl()
     }
     
     func setCollectionView() {
@@ -36,12 +60,26 @@ class CityViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         let inset: CGFloat = 20
         let spacing: CGFloat = 20
-        cellWidth = (deviceWidth - (spacing + 2 * inset)) / 2
+        let cellWidth = (deviceWidth - (spacing + 2 * inset)) / 2
         layout.itemSize = CGSize(width: cellWidth, height: cellWidth * 1.4)
         layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         layout.minimumLineSpacing = spacing
         layout.minimumInteritemSpacing = spacing
         collectionView.collectionViewLayout = layout
+    }
+    
+    func setSegmentControl() {
+        for (i, type) in CityType.allCases.enumerated() {
+            citySegmentControl.setTitle(type.rawValue, forSegmentAt: i)
+        }
+        citySegmentControl.setTitleTextAttributes([.font: UIFont.boldSystemFont(ofSize: 14)], for: .selected)
+        citySegmentControl.addTarget(self, action: #selector(segmentChanged), for: .valueChanged)
+    }
+    
+    // segmentedControl 값 변경 시
+    @objc func segmentChanged(_ sender: UISegmentedControl) {
+        cityType = CityType.allCases[sender.selectedSegmentIndex]
+        cityList = cityType.cityList
     }
 }
 
