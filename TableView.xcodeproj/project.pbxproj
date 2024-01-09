@@ -55,6 +55,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F49DABF2B4D351D005B0C1D /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				4F7F30AB2B49177D00A28267 /* ShoppingTableViewController.swift */,
+				4F7F30A92B48FD6100A28267 /* ShoppingTableViewCell.swift */,
+				4FA097692B4C6D0C00E84B79 /* Shopping.swift */,
+				4FA097672B4C66E300E84B79 /* UserDefaults.swift */,
+			);
+			path = Shopping;
+			sourceTree = "<group>";
+		};
+		4F49DAC02B4D3538005B0C1D /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				4FA0976B2B4C747700E84B79 /* TravelTableViewController.swift */,
+				4FA0976D2B4C748B00E84B79 /* TravelTableViewCell.swift */,
+				4FA0976F2B4C773B00E84B79 /* Magazine.swift */,
+			);
+			path = Travel;
+			sourceTree = "<group>";
+		};
 		4F7F30872B481F5500A28267 = {
 			isa = PBXGroup;
 			children = (
@@ -74,17 +95,12 @@
 		4F7F30922B481F5500A28267 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				4F49DAC02B4D3538005B0C1D /* Travel */,
+				4F49DABF2B4D351D005B0C1D /* Shopping */,
 				4F7F30932B481F5500A28267 /* AppDelegate.swift */,
 				4F7F30952B481F5500A28267 /* SceneDelegate.swift */,
 				4F7F30972B481F5500A28267 /* ViewController.swift */,
 				4F7F30A72B482A1100A28267 /* SettingTableViewController.swift */,
-				4F7F30AB2B49177D00A28267 /* ShoppingTableViewController.swift */,
-				4F7F30A92B48FD6100A28267 /* ShoppingTableViewCell.swift */,
-				4FA097692B4C6D0C00E84B79 /* Shopping.swift */,
-				4FA097672B4C66E300E84B79 /* UserDefaults.swift */,
-				4FA0976B2B4C747700E84B79 /* TravelTableViewController.swift */,
-				4FA0976D2B4C748B00E84B79 /* TravelTableViewCell.swift */,
-				4FA0976F2B4C773B00E84B79 /* Magazine.swift */,
 				4F7F30992B481F5500A28267 /* Main.storyboard */,
 				4F7F309C2B481F5700A28267 /* Assets.xcassets */,
 				4F7F309E2B481F5700A28267 /* LaunchScreen.storyboard */,
