@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F49DAC32B4D35A4005B0C1D /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAC22B4D35A4005B0C1D /* City.swift */; };
 		4F7F30942B481F5500A28267 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30932B481F5500A28267 /* AppDelegate.swift */; };
 		4F7F30962B481F5500A28267 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30952B481F5500A28267 /* SceneDelegate.swift */; };
 		4F7F30982B481F5500A28267 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30972B481F5500A28267 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F49DAC22B4D35A4005B0C1D /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		4F7F30902B481F5500A28267 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7F30932B481F5500A28267 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F7F30952B481F5500A28267 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 			path = Travel;
 			sourceTree = "<group>";
 		};
+		4F49DAC12B4D3593005B0C1D /* City */ = {
+			isa = PBXGroup;
+			children = (
+				4F49DAC22B4D35A4005B0C1D /* City.swift */,
+			);
+			path = City;
+			sourceTree = "<group>";
+		};
 		4F7F30872B481F5500A28267 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 		4F7F30922B481F5500A28267 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				4F49DAC12B4D3593005B0C1D /* City */,
 				4F49DAC02B4D3538005B0C1D /* Travel */,
 				4F49DABF2B4D351D005B0C1D /* Shopping */,
 				4F7F30932B481F5500A28267 /* AppDelegate.swift */,
@@ -188,6 +199,7 @@
 			files = (
 				4F7F30A82B482A1100A28267 /* SettingTableViewController.swift in Sources */,
 				4FA0976C2B4C747700E84B79 /* TravelTableViewController.swift in Sources */,
+				4F49DAC32B4D35A4005B0C1D /* City.swift in Sources */,
 				4FA0976A2B4C6D0C00E84B79 /* Shopping.swift in Sources */,
 				4FA0976E2B4C748B00E84B79 /* TravelTableViewCell.swift in Sources */,
 				4F7F30AC2B49177D00A28267 /* ShoppingTableViewController.swift in Sources */,
