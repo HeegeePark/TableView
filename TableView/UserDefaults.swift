@@ -29,7 +29,6 @@ struct UserDefault<T: Codable> {
             return value ?? defaultValue
         }
         set {
-            print("변경되었니", newValue)
             let data = try? JSONEncoder().encode(newValue)
             
             UserDefaults.standard.set(data, forKey: key)
