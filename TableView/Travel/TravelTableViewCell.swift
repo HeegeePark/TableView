@@ -24,23 +24,18 @@ class TravelTableViewCell: UITableViewCell {
         thumbnailImageView.layer.cornerRadius = 16
         
         // 제목 레이블
+        
         titleLabel.text = magazine.title
-        titleLabel.font = .boldSystemFont(ofSize: 18)
-        titleLabel.textColor = .black
-        titleLabel.numberOfLines = 2
+        titleLabel.setLabel(style: .title)
         titleLabel.lineBreakMode = .byWordWrapping
         
         // 부제 레이블
         subtitleLabel.text = magazine.subtitle
-        subtitleLabel.font = .boldSystemFont(ofSize: 14)
-        subtitleLabel.textColor = .gray
-        subtitleLabel.numberOfLines = 1
+        subtitleLabel.setLabel(style: .subtitle)
         
-        // 부제 레이블
+        // 날짜 레이블
         dateLabel.text = dateFormatting(magazine.date)
-        dateLabel.font = .boldSystemFont(ofSize: 12)
-        dateLabel.textColor = .gray
-        dateLabel.numberOfLines = 1
+        dateLabel.setLabel(style: .date)
     }
     
     // 날짜 포맷: String -> Date -> String

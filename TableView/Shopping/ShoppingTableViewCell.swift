@@ -25,8 +25,9 @@ class ShoppingTableViewCell: UITableViewCell {
         
         // 타이틀 레이블
         label.text = shopping.title
-        label.font = .systemFont(ofSize: 12)
-        label.textColor = .black
+        var style = LabelStyle.default
+        style.font = .systemFont(ofSize: 12)
+        label.setLabel(style: style)
         
         // 체크 버튼
         let checkImage = shopping.isDone ? UIImage(systemName: "checkmark.square.fill"): UIImage(systemName: "checkmark.square")

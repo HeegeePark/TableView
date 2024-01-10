@@ -25,16 +25,16 @@ class CityCollectionViewCell: UICollectionViewCell {
         imageView.contentMode = .scaleToFill
         
         // 도시이름 레이블
-        nameLabel.font = .boldSystemFont(ofSize: 18)
-        nameLabel.textColor = .black
-        nameLabel.textAlignment = .center
-        nameLabel.numberOfLines = 1
+        var titleStyle = LabelStyle.title
+        titleStyle.textAlignment = .center
+        nameLabel.setLabel(style: titleStyle)
+        
         
         // 설명 레이블
-        explainLabel.font = .boldSystemFont(ofSize: 14)
-        explainLabel.textColor = .gray
-        explainLabel.textAlignment = .center
-        explainLabel.numberOfLines = 2
+        var subTitleStyle = LabelStyle.subtitle
+        subTitleStyle.textAlignment = .center
+        subTitleStyle.numberOfLines = 2
+        explainLabel.setLabel(style: subTitleStyle)
     }
     
     func configureUI(city: City) {
