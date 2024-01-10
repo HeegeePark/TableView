@@ -31,7 +31,6 @@ class CityViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     
     let deviceWidth = UIScreen.main.bounds.width
-//    let tabBarHeight = UITabBarController().tabBar.frame.height
     var cityType: CityType = .all
     var cityList: [City] = [] {
         didSet {
