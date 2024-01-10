@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dm7-Da-n9W">
-    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -420,7 +420,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fFj-pJ-C9N">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemFillColor"/>
                         <color key="selectedImageTintColor" systemColor="systemGreenColor"/>
                     </tabBar>
                     <connections>
@@ -479,7 +479,7 @@
                                 </segments>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cta-it-aHD">
-                                <rect key="frame" x="0.0" y="141" width="393" height="711"/>
+                                <rect key="frame" x="0.0" y="141" width="393" height="628"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Rhg-Q1-iVR">
                                     <size key="itemSize" width="128" height="128"/>
@@ -503,7 +503,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZVq-4t-UBp" firstAttribute="top" secondItem="SJv-Jp-nTW" secondAttribute="top" id="749-2Q-oxY"/>
-                            <constraint firstAttribute="bottom" secondItem="Cta-it-aHD" secondAttribute="bottom" id="Ah2-jb-Voj"/>
+                            <constraint firstItem="SJv-Jp-nTW" firstAttribute="bottom" secondItem="Cta-it-aHD" secondAttribute="bottom" id="Ah2-jb-Voj"/>
                             <constraint firstItem="Cta-it-aHD" firstAttribute="leading" secondItem="SJv-Jp-nTW" secondAttribute="leading" id="JP4-07-5rY"/>
                             <constraint firstItem="Cta-it-aHD" firstAttribute="trailing" secondItem="SJv-Jp-nTW" secondAttribute="trailing" id="VY2-GX-duf"/>
                             <constraint firstItem="Cta-it-aHD" firstAttribute="top" secondItem="ZVq-4t-UBp" secondAttribute="bottom" constant="8" symbolic="YES" id="eag-SL-dch"/>
@@ -596,11 +596,11 @@
             </objects>
             <point key="canvasLocation" x="2893.8931297709923" y="1648.5915492957747"/>
         </scene>
-        <!--City-->
+        <!--Navigation Controller-->
         <scene sceneID="eaH-hj-nTZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="79T-oi-GjQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="City" image="globe.americas" catalog="system" selectedImage="globe.americas.fill" id="Zha-83-08l"/>
+                    <tabBarItem key="tabBarItem" title="" image="globe.americas" catalog="system" selectedImage="globe.americas.fill" id="Zha-83-08l"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Px9-lE-iPg">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -617,7 +617,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ene-4O-w4A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2052.6717557251909" y="2319.7183098591549"/>
+            <point key="canvasLocation" x="1384" y="2475"/>
         </scene>
     </scenes>
     <resources>
@@ -636,6 +636,9 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
