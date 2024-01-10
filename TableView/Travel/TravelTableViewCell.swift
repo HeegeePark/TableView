@@ -21,7 +21,7 @@ class TravelTableViewCell: UITableViewCell {
         let url = URL(string: magazine.photo_image)
         thumbnailImageView.kf.setImage(with: url)
         thumbnailImageView.contentMode = .scaleAspectFill
-        thumbnailImageView.layer.cornerRadius = 16
+        thumbnailImageView.setCornerRadius(style: .medium)
         
         // 제목 레이블
         

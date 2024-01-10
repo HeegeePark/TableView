@@ -44,9 +44,8 @@ class CityCollectionViewCell: UICollectionViewCell {
         explainLabel.text = city.explain
     }
     
-    // TODO: Circle 이슈 해결할 수 있는 메서드, 공부해볼 것.
     override func layoutSubviews() {
         super.layoutSubviews()
-        imageView.layer.cornerRadius = imageView.bounds.width / 2
+        imageView.setCornerRadius(style: .circle(imageView))
     }
 }

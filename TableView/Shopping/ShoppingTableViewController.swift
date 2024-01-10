@@ -56,7 +56,7 @@ class ShoppingTableViewController: UITableViewController {
         
         // 헤더뷰 백그라운드 뷰
         headerView.backgroundColor = #colorLiteral(red: 0.951883018, green: 0.9470081925, blue: 0.9709880948, alpha: 1)
-        headerView.layer.cornerRadius = 10
+        headerView.setCornerRadius()
         
         // 헤더뷰 텍스트필드
         todoTextField.borderStyle = .none
@@ -72,7 +72,7 @@ class ShoppingTableViewController: UITableViewController {
         addButton.setTitleColor(.black, for: .normal)
         addButton.titleLabel?.font = .systemFont(ofSize: 13)
         addButton.backgroundColor = #colorLiteral(red: 0.8975048065, green: 0.8984213471, blue: 0.9142318368, alpha: 1)
-        addButton.layer.cornerRadius = 8
+        addButton.setCornerRadius(style: .small)
     }
     
     // MARK: - UITableView

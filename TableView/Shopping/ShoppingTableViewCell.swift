@@ -21,7 +21,7 @@ class ShoppingTableViewCell: UITableViewCell {
     func setupUI(shopping: Shopping) {
         // 셀 백그라운드 뷰
         cellView.backgroundColor = #colorLiteral(red: 0.951883018, green: 0.9470081925, blue: 0.9709880948, alpha: 1)
-        cellView.layer.cornerRadius = 8
+        cellView.setCornerRadius(style: .small)
         
         // 타이틀 레이블
         label.text = shopping.title
