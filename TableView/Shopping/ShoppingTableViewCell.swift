@@ -25,20 +25,22 @@ class ShoppingTableViewCell: UITableViewCell {
         
         // 타이틀 레이블
         label.text = shopping.title
-        var style = LabelStyle.default
-        style.font = .systemFont(ofSize: 12)
-        label.setLabel(style: style)
+        var titleStyle = LabelStyle.default
+        titleStyle.font = .systemFont(ofSize: 12)
+        label.setLabel(style: titleStyle)
         
         // 체크 버튼
         let checkImage = shopping.isDone ? UIImage(systemName: "checkmark.square.fill"): UIImage(systemName: "checkmark.square")
-        checkButton.setImage(checkImage, for: .normal)
-        checkButton.tintColor = .black
+        var checkStyle = ButtonStyle.default
+        checkStyle.image = checkImage
+        checkButton.setButton(style: checkStyle)
         checkButton.addTarget(self, action: #selector(checkButtonTapped), for: .touchUpInside)
         
         // 별 버튼
         let starImage = shopping.isStarred ? UIImage(systemName: "star.fill"): UIImage(systemName: "star")
-        starButton.setImage(starImage, for: .normal)
-        starButton.tintColor = .black
+        var starStyle = ButtonStyle.default
+        starStyle.image = starImage
+        starButton.setButton(style: starStyle)
         starButton.addTarget(self, action: #selector(starButtonTapped), for: .touchUpInside)
     }
     
