@@ -12,6 +12,8 @@
 		4F49DAC82B4D3915005B0C1D /* CityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAC62B4D3915005B0C1D /* CityCollectionViewCell.swift */; };
 		4F49DAC92B4D3915005B0C1D /* CityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F49DAC72B4D3915005B0C1D /* CityCollectionViewCell.xib */; };
 		4F49DAE72B4E8D74005B0C1D /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAE62B4E8D74005B0C1D /* UILabel+Extension.swift */; };
+		4F49DAE92B4EA63E005B0C1D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAE82B4EA63E005B0C1D /* Date+Extension.swift */; };
+		4F49DAEB2B4EA64A005B0C1D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAEA2B4EA64A005B0C1D /* String+Extension.swift */; };
 		4F7F30942B481F5500A28267 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30932B481F5500A28267 /* AppDelegate.swift */; };
 		4F7F30962B481F5500A28267 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30952B481F5500A28267 /* SceneDelegate.swift */; };
 		4F7F30982B481F5500A28267 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30972B481F5500A28267 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 		4F49DAC62B4D3915005B0C1D /* CityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionViewCell.swift; sourceTree = "<group>"; };
 		4F49DAC72B4D3915005B0C1D /* CityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCollectionViewCell.xib; sourceTree = "<group>"; };
 		4F49DAE62B4E8D74005B0C1D /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		4F49DAE82B4EA63E005B0C1D /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		4F49DAEA2B4EA64A005B0C1D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		4F7F30902B481F5500A28267 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7F30932B481F5500A28267 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F7F30952B481F5500A28267 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				4F49DAE62B4E8D74005B0C1D /* UILabel+Extension.swift */,
+				4F49DAE82B4EA63E005B0C1D /* Date+Extension.swift */,
+				4F49DAEA2B4EA64A005B0C1D /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -223,8 +229,10 @@
 				4F49DAE72B4E8D74005B0C1D /* UILabel+Extension.swift in Sources */,
 				4FA0976C2B4C747700E84B79 /* TravelTableViewController.swift in Sources */,
 				4F49DAC32B4D35A4005B0C1D /* City.swift in Sources */,
+				4F49DAE92B4EA63E005B0C1D /* Date+Extension.swift in Sources */,
 				4FA0976A2B4C6D0C00E84B79 /* Shopping.swift in Sources */,
 				4FA0976E2B4C748B00E84B79 /* TravelTableViewCell.swift in Sources */,
+				4F49DAEB2B4EA64A005B0C1D /* String+Extension.swift in Sources */,
 				4F7F30AC2B49177D00A28267 /* ShoppingTableViewController.swift in Sources */,
 				4F49DAC82B4D3915005B0C1D /* CityCollectionViewCell.swift in Sources */,
 				4F7F30982B481F5500A28267 /* ViewController.swift in Sources */,

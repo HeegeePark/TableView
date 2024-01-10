@@ -8,11 +8,17 @@
 import UIKit
 
 extension UILabel {
+    // Label 스타일 설정
     func setLabel(style: LabelStyle = .default) {
         self.font = style.font
         self.textColor = style.textColor
         self.textAlignment = style.textAlignment
         self.numberOfLines = style.numberOfLines
+    }
+    
+    // 날짜 포맷: String -> Date -> String
+    func setDateText(data: String) {
+        self.text = data.toDate()?.toString()
     }
 }
 

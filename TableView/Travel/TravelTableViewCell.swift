@@ -34,20 +34,7 @@ class TravelTableViewCell: UITableViewCell {
         subtitleLabel.setLabel(style: .subtitle)
         
         // 날짜 레이블
-        dateLabel.text = dateFormatting(magazine.date)
+        dateLabel.setDateText(data: magazine.date)
         dateLabel.setLabel(style: .date)
-    }
-    
-    // 날짜 포맷: String -> Date -> String
-    func dateFormatting(_ dateString: String) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyMMdd"
-        
-        guard let date = dateFormatter.date(from: dateString) else {
-            return "날짜 불러오기 실패"
-        }
-        
-        dateFormatter.dateFormat = "yy년 MM월 dd일"
-        return dateFormatter.string(from: date)
     }
 }
