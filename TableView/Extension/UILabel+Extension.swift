@@ -35,14 +35,14 @@ struct LabelStyle {
                             numberOfLines: 0
                         )
     
-    static let `title` = LabelStyle(
+    static let title = LabelStyle(
                             font: .boldSystemFont(ofSize: 18),
                             textColor: .black,
                             textAlignment: .left,
                             numberOfLines: 0
                         )
     
-    static let `subtitle` = LabelStyle(
+    static let subtitle = LabelStyle(
                             font: .boldSystemFont(ofSize: 14)
 ,
                             textColor: .gray,
@@ -50,7 +50,7 @@ struct LabelStyle {
                             numberOfLines: 2
                         )
     
-    static let `date` = LabelStyle(
+    static let date = LabelStyle(
                             font: .boldSystemFont(ofSize: 12),
                             textColor: .gray,
                             textAlignment: .left,
