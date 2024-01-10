@@ -31,6 +31,7 @@ class CityViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     
     let deviceWidth = UIScreen.main.bounds.width
+//    let tabBarHeight = UITabBarController().tabBar.frame.height
     var cityType: CityType = .all
     var cityList: [City] = [] {
         didSet {
@@ -56,13 +57,12 @@ class CityViewController: UIViewController {
         collectionView.delegate = self
         
         // 컬렌션뷰 레이아웃 설정
-        print("layout")
         let layout = UICollectionViewFlowLayout()
         let inset: CGFloat = 20
         let spacing: CGFloat = 20
         let cellWidth = (deviceWidth - (spacing + 2 * inset)) / 2
         layout.itemSize = CGSize(width: cellWidth, height: cellWidth * 1.4)
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        layout.sectionInset = UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
         layout.minimumLineSpacing = spacing
         layout.minimumInteritemSpacing = spacing
         collectionView.collectionViewLayout = layout
