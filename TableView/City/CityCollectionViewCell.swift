@@ -17,10 +17,18 @@ class CityCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupUI()
+        configureUI()
     }
     
-    func setupUI() {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        imageView.setCornerRadius(style: .circle(imageView))
+    }
+}
+
+extension CityCollectionViewCell: UICollectionViewCellProtocol {
+    // 정적인 셀 디자인
+    func configureUI() {
         // 이미지 뷰
         imageView.contentMode = .scaleToFill
         
@@ -37,15 +45,13 @@ class CityCollectionViewCell: UICollectionViewCell {
         explainLabel.setLabel(style: subTitleStyle)
     }
     
-    func configureUI(city: City) {
+    // 데이터 바인딩
+    func bindItem(data: Any) {
+        guard let city = data as? City else { return }
+        
         let url = URL(string: city.imageString)
         imageView.kf.setImage(with: url!)
         nameLabel.text = city.name + " | " + city.englishName
         explainLabel.text = city.explain
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        imageView.setCornerRadius(style: .circle(imageView))
     }
 }

@@ -86,7 +86,7 @@ class ShoppingTableViewController: UITableViewController {
         let shopping = shoppingList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingTableViewCell.identifier, for: indexPath) as? ShoppingTableViewCell
         
-        cell?.setupUI(shopping: shopping)
+        cell?.bindItem(data: shopping)
         
         // 할 일 완료 핸들링
         cell?.checkButtonTapHadler = {

@@ -18,30 +18,9 @@ class ShoppingTableViewCell: UITableViewCell {
     var checkButtonTapHadler: (() -> Void)?
     var starButtonTapHadler: (() -> Void)?
     
-    func setupUI(shopping: Shopping) {
-        // 셀 백그라운드 뷰
-        cellView.backgroundColor = #colorLiteral(red: 0.951883018, green: 0.9470081925, blue: 0.9709880948, alpha: 1)
-        cellView.setCornerRadius(style: .small)
-        
-        // 타이틀 레이블
-        label.text = shopping.title
-        var titleStyle = LabelStyle.default
-        titleStyle.font = .systemFont(ofSize: 12)
-        label.setLabel(style: titleStyle)
-        
-        // 체크 버튼
-        let checkImage = shopping.isDone ? UIImage(systemName: "checkmark.square.fill"): UIImage(systemName: "checkmark.square")
-        var checkStyle = ButtonStyle.default
-        checkStyle.image = checkImage
-        checkButton.setButton(style: checkStyle)
-        checkButton.addTarget(self, action: #selector(checkButtonTapped), for: .touchUpInside)
-        
-        // 별 버튼
-        let starImage = shopping.isStarred ? UIImage(systemName: "star.fill"): UIImage(systemName: "star")
-        var starStyle = ButtonStyle.default
-        starStyle.image = starImage
-        starButton.setButton(style: starStyle)
-        starButton.addTarget(self, action: #selector(starButtonTapped), for: .touchUpInside)
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        configureUI()
     }
     
     // 체크 버튼이 눌렸을 때
@@ -54,4 +33,42 @@ class ShoppingTableViewCell: UITableViewCell {
         starButtonTapHadler?()
     }
     
+}
+
+extension ShoppingTableViewCell: UITableViewCellProtocol {
+    func configureUI() {
+        // 셀 백그라운드 뷰
+        cellView.backgroundColor = #colorLiteral(red: 0.951883018, green: 0.9470081925, blue: 0.9709880948, alpha: 1)
+        cellView.setCornerRadius(style: .small)
+        
+        // 타이틀 레이블
+        var titleStyle = LabelStyle.default
+        titleStyle.font = .systemFont(ofSize: 12)
+        label.setLabel(style: titleStyle)
+        
+        // 체크 버튼
+        checkButton.addTarget(self, action: #selector(checkButtonTapped), for: .touchUpInside)
+        
+        // 별 버튼
+        starButton.addTarget(self, action: #selector(starButtonTapped), for: .touchUpInside)
+    }
+    
+    func bindItem(data: Any) {
+        guard let shopping = data as? Shopping else { return }
+        
+        // 타이틀 레이블
+        label.text = shopping.title
+        
+        // 체크 버튼
+        let checkImage = shopping.isDone ? UIImage(systemName: "checkmark.square.fill"): UIImage(systemName: "checkmark.square")
+        var checkStyle = ButtonStyle.default
+        checkStyle.image = checkImage
+        checkButton.setButton(style: checkStyle)
+        
+        // 별 버튼
+        let starImage = shopping.isStarred ? UIImage(systemName: "star.fill"): UIImage(systemName: "star")
+        var starStyle = ButtonStyle.default
+        starStyle.image = starImage
+        starButton.setButton(style: starStyle)
+    }    
 }

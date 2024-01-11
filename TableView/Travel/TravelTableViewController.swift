@@ -30,7 +30,7 @@ class TravelTableViewController: UITableViewController {
             return UITableViewCell()
         }
         
-        cell.setupUI(magazine: magazine)
+        cell.bindItem(data: magazine)
         
         return cell
     }

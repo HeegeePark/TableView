@@ -29,8 +29,7 @@ class CityViewController: UIViewController {
 
     @IBOutlet var citySegmentControl: UISegmentedControl!
     @IBOutlet var collectionView: UICollectionView!
-    
-    let deviceWidth = UIScreen.main.bounds.width
+
     var cityType: CityType = .all
     var cityList: [City] = [] {
         didSet {
@@ -47,24 +46,21 @@ class CityViewController: UIViewController {
     }
     
     func setCollectionView() {
-        // XIB 셀 연결
+        registerXib()
+        connectDelegate()
+        collectionView.setLayout(inset: 20, spacing: 20, ratio: 1.4, colCount: 2)
+    }
+    
+    // XIB 셀 연결
+    func registerXib() {
         let xib = UINib(nibName: CityCollectionViewCell.identifier, bundle: nil)
         collectionView.register(xib,forCellWithReuseIdentifier: CityCollectionViewCell.identifier)
-        
-        // 프로토콜 연결
+    }
+    
+    // 프로토콜 연결
+    func connectDelegate() {
         collectionView.dataSource = self
         collectionView.delegate = self
-        
-        // 컬렌션뷰 레이아웃 설정
-        let layout = UICollectionViewFlowLayout()
-        let inset: CGFloat = 20
-        let spacing: CGFloat = 20
-        let cellWidth = (deviceWidth - (spacing + 2 * inset)) / 2
-        layout.itemSize = CGSize(width: cellWidth, height: cellWidth * 1.4)
-        layout.sectionInset = UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
-        layout.minimumLineSpacing = spacing
-        layout.minimumInteritemSpacing = spacing
-        collectionView.collectionViewLayout = layout
     }
     
     func setSegmentControl() {
@@ -93,7 +89,7 @@ extension CityViewController: UICollectionViewDataSource, UICollectionViewDelega
         }
         let city = cityList[indexPath.item]
         
-        cell.configureUI(city: city)
+        cell.bindItem(data: city)
         
         return cell
     }
