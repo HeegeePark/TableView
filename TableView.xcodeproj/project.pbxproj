@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F10DADA2B4FDA4A00D58A09 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F10DAD92B4FDA4A00D58A09 /* Travel.swift */; };
 		4F333CB02B4F762800FAA150 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F333CAF2B4F762800FAA150 /* UICollectionView+Extension.swift */; };
 		4F49DAC32B4D35A4005B0C1D /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAC22B4D35A4005B0C1D /* City.swift */; };
 		4F49DAC52B4D38F1005B0C1D /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAC42B4D38F1005B0C1D /* CityViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F10DAD92B4FDA4A00D58A09 /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
 		4F333CAF2B4F762800FAA150 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		4F49DAC22B4D35A4005B0C1D /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		4F49DAC42B4D38F1005B0C1D /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				4F49DAC42B4D38F1005B0C1D /* CityViewController.swift */,
 				4F49DAC62B4D3915005B0C1D /* CityCollectionViewCell.swift */,
 				4F49DAC72B4D3915005B0C1D /* CityCollectionViewCell.xib */,
+				4F10DAD92B4FDA4A00D58A09 /* Travel.swift */,
 			);
 			path = City;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				4F7F30A82B482A1100A28267 /* SettingTableViewController.swift in Sources */,
 				4F49DAC52B4D38F1005B0C1D /* CityViewController.swift in Sources */,
 				4F49DAE72B4E8D74005B0C1D /* UILabel+Extension.swift in Sources */,
+				4F10DADA2B4FDA4A00D58A09 /* Travel.swift in Sources */,
 				4FA0976C2B4C747700E84B79 /* TravelTableViewController.swift in Sources */,
 				4F49DAC32B4D35A4005B0C1D /* City.swift in Sources */,
 				4F49DAE92B4EA63E005B0C1D /* Date+Extension.swift in Sources */,
