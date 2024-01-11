@@ -26,12 +26,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oze-FZ-hGo">
+                                <rect key="frame" x="271.33333333333331" y="4" width="28.666666666666686" height="21"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="AD">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
+                                    <directionalEdgeInsets key="contentInsets" top="2" leading="4" bottom="2" trailing="4"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="70" id="FW4-y3-xLB"/>
+                            <constraint firstItem="Oze-FZ-hGo" firstAttribute="trailing" secondItem="mJh-4N-N73" secondAttribute="trailing" constant="-4" id="Poy-Jt-L3b"/>
                             <constraint firstItem="mJh-4N-N73" firstAttribute="leading" secondItem="WJa-hD-kEW" secondAttribute="leading" id="jge-aS-wxb"/>
                             <constraint firstAttribute="bottom" secondItem="mJh-4N-N73" secondAttribute="bottom" id="kuF-Go-4Hv"/>
+                            <constraint firstItem="Oze-FZ-hGo" firstAttribute="top" secondItem="mJh-4N-N73" secondAttribute="top" constant="4" id="o8p-jJ-bL1"/>
                             <constraint firstItem="mJh-4N-N73" firstAttribute="top" secondItem="WJa-hD-kEW" secondAttribute="top" id="vbt-dE-hnS"/>
                             <constraint firstAttribute="trailing" secondItem="mJh-4N-N73" secondAttribute="trailing" id="xrC-Mx-86L"/>
                         </constraints>

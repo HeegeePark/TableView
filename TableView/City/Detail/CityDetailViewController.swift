@@ -31,15 +31,18 @@ class CityDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureNavigationBar()
         configureTableView()
-    }
-    
-    
+    }    
 }
 
 // MARK: - Custom UI
 
 extension CityDetailViewController {
+    func configureNavigationBar() {
+        navigationItem.title = "도시 상세 정보"
+    }
+    
     func configureTableView() {
         registerXib()
         connectDelegate()
