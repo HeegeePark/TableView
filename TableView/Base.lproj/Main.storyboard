@@ -468,7 +468,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZVq-4t-UBp">
-                                <rect key="frame" x="20" y="103" width="353" height="31"/>
+                                <rect key="frame" x="20" y="167" width="353" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="YrD-AX-2bz"/>
                                 </constraints>
@@ -479,7 +479,7 @@
                                 </segments>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cta-it-aHD">
-                                <rect key="frame" x="0.0" y="141" width="393" height="628"/>
+                                <rect key="frame" x="0.0" y="205" width="393" height="564"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Rhg-Q1-iVR">
                                     <size key="itemSize" width="128" height="128"/>
@@ -498,28 +498,48 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Ik3-bm-43E">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Iqa-qv-Kjw" id="Pfm-lp-ouM"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SJv-Jp-nTW"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="ZVq-4t-UBp" firstAttribute="top" secondItem="SJv-Jp-nTW" secondAttribute="top" id="749-2Q-oxY"/>
+                            <constraint firstItem="Ik3-bm-43E" firstAttribute="leading" secondItem="SJv-Jp-nTW" secondAttribute="leading" id="9d8-e8-R5x"/>
+                            <constraint firstItem="Ik3-bm-43E" firstAttribute="top" secondItem="SJv-Jp-nTW" secondAttribute="top" id="AKu-Ha-MTb"/>
                             <constraint firstItem="SJv-Jp-nTW" firstAttribute="bottom" secondItem="Cta-it-aHD" secondAttribute="bottom" id="Ah2-jb-Voj"/>
                             <constraint firstItem="Cta-it-aHD" firstAttribute="leading" secondItem="SJv-Jp-nTW" secondAttribute="leading" id="JP4-07-5rY"/>
                             <constraint firstItem="Cta-it-aHD" firstAttribute="trailing" secondItem="SJv-Jp-nTW" secondAttribute="trailing" id="VY2-GX-duf"/>
                             <constraint firstItem="Cta-it-aHD" firstAttribute="top" secondItem="ZVq-4t-UBp" secondAttribute="bottom" constant="8" symbolic="YES" id="eag-SL-dch"/>
                             <constraint firstItem="SJv-Jp-nTW" firstAttribute="trailing" secondItem="ZVq-4t-UBp" secondAttribute="trailing" constant="20" id="f9o-DV-Jyj"/>
                             <constraint firstItem="ZVq-4t-UBp" firstAttribute="leading" secondItem="SJv-Jp-nTW" secondAttribute="leading" constant="20" id="jrh-nE-f0j"/>
+                            <constraint firstItem="Ik3-bm-43E" firstAttribute="trailing" secondItem="SJv-Jp-nTW" secondAttribute="trailing" id="tTV-4d-UOs"/>
+                            <constraint firstItem="ZVq-4t-UBp" firstAttribute="top" secondItem="Ik3-bm-43E" secondAttribute="bottom" constant="8" id="x5g-97-YwP"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Pbs-EN-qDs" appends="YES" id="aml-gu-uM7"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="인기 도시" id="qwf-cL-YCZ"/>
                     <connections>
                         <outlet property="citySegmentControl" destination="ZVq-4t-UBp" id="o73-Nv-R5Q"/>
                         <outlet property="collectionView" destination="Cta-it-aHD" id="SWM-Lf-DS7"/>
+                        <outlet property="searchBar" destination="Ik3-bm-43E" id="36U-Jq-vZh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Yf-aU-SQm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Pbs-EN-qDs">
+                    <connections>
+                        <action selector="keyboardDismiss:" destination="Iqa-qv-Kjw" id="C22-im-fs8"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2893.8931297709923" y="2319.7183098591549"/>
+            <point key="canvasLocation" x="2895" y="2475"/>
         </scene>
         <!--SeSAC TRAVEL-->
         <scene sceneID="A0m-vG-oxw">

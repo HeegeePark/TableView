@@ -13,7 +13,7 @@ enum CityType: String, CaseIterable {
     case abroad = "해외"
     
     var cityList: [City] {
-        let list = City.getDummy()
+        let list = City.dummy
         switch self {
         case .all:
             return list
@@ -29,7 +29,8 @@ class CityViewController: UIViewController {
 
     @IBOutlet var citySegmentControl: UISegmentedControl!
     @IBOutlet var collectionView: UICollectionView!
-
+    @IBOutlet var searchBar: UISearchBar!
+    
     var cityType: CityType = .all
     var cityList: [City] = [] {
         didSet {
@@ -41,14 +42,24 @@ class CityViewController: UIViewController {
         super.viewDidLoad()
         
         cityList = self.cityType.cityList
+        
+        setSearchBar()
         setCollectionView()
         setSegmentControl()
+    }
+    
+    func setSearchBar() {
+        searchBar.placeholder = "가고 싶은 도시를 입력해주세요"
+        searchBar.delegate = self
     }
     
     func setCollectionView() {
         registerXib()
         connectDelegate()
         collectionView.setLayout(inset: 20, spacing: 20, ratio: 1.4, colCount: 2)
+    }
+    @IBAction func keyboardDismiss(_ sender: UITapGestureRecognizer) {
+        searchBar.resignFirstResponder()
     }
     
     // XIB 셀 연결
@@ -74,7 +85,7 @@ class CityViewController: UIViewController {
     // segmentedControl 값 변경 시
     @objc func segmentChanged(_ sender: UISegmentedControl) {
         cityType = CityType.allCases[sender.selectedSegmentIndex]
-        cityList = cityType.cityList
+        searchBar(searchBar, textDidChange: searchBar.text ?? "")
     }
 }
 
@@ -92,5 +103,37 @@ extension CityViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.bindItem(data: city)
         
         return cell
+    }
+}
+
+extension CityViewController: UISearchBarDelegate {
+    // 텍스트가 바뀔 때
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // text empty 바인딩
+        guard !searchText.isEmpty else {
+            cityList = cityType.cityList
+            return
+        }
+        
+        // 띄어쓰기 막기
+        guard !searchText.contains(" ") else {
+            searchBar.text = searchText.replacingOccurrences(of: " ", with: "")
+            return
+        }
+        
+        // 대소문자 제거
+        let lowercasedText = searchText.lowercased()
+        
+        // list 셋업
+        cityList = cityType.cityList.filter { city in
+            return city.name.contains(lowercasedText) ||
+            city.englishName.lowercased().contains(lowercasedText) ||
+            city.explain.contains(lowercasedText)
+        }
+    }
+    
+    // search 버튼 클릭 시
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }

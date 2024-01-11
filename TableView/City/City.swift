@@ -16,8 +16,7 @@ struct City {
 }
 
 extension City {
-    static func getDummy() -> [Self] {
-        return [
+    static let dummy = [
             City(name: "방콕", englishName: "Bangkok", explain: "방콕, 파타야, 후아힌, 코사멧, 코사무이", imageString: "https://i.namu.wiki/i/OUKHuXT-QXe-wDgGE_9hMfEW9Sb3lyMWl0SSbpTQyfl0Lw3rs_A_DuVyXBNXTFG3FUkfmy7hBjL68dgLzssEQg.webp", domesticTravel: false),
             City(name: "오사카", englishName: "Osaka", explain: "오사카, 교토, 고베, 나라", imageString: "https://i.namu.wiki/i/IyejHd9WlEd118tJq1coTwS4RpkaqIY0JhPbbiVX6WWpkkoWbLK-R4DkPg8GN4cLvm0RmhWuBTrY7HymFxoUhFY48GKKxnmzsXNu7VZBO2x1y9wsOizxOxb0ngLmTqjQeZVd4pgySwBDqRvoc9LYsw.webp", domesticTravel: false),
             City(name: "다낭", englishName: "Danang", explain: "다낭, 호이안, 후에", imageString: "https://i.namu.wiki/i/skBWgWUvf6QsFa_GV-falaAW6bO-g1FDlSTTL8AHZ-WfRdDVwpll5AR29N4oPl1H0SMqIAP87clppdEpmGdrwVEFAAT47BUVNCk02OrN9S7a1m3o4AKoEFO1UUTUvtO02mFV2tCOAz9l32hWwKDESA.webp", domesticTravel: false),
@@ -34,6 +33,5 @@ extension City {
             City(name: "토론토", englishName: "Toronto", explain: "토론토, 나이아가라, 킹스턴, 블루마운틴", imageString: "https://i.namu.wiki/i/I7os9ysTEyBl4sVe-9AN-dHFmJ95e0j3P03DIQiVwIrLOi_RAbo311TdKiRFb0LMyUkbhAPzASfH6JR25cVXj3vYNR2S9koQBZsWrEitWWRe855pPYigkUFUvXGDn1xTF2jxneC4NRl7zcRY5_iBRA.webp", domesticTravel: false),
             City(name: "대전", englishName: "Daejeon", explain: "대전, 성심당", imageString: "https://i.namu.wiki/i/fFklvoNy6HqB2XtGHad8aZ9zItaH-ow-H97JlYV5OvgYHWgOfjiL4OPB_7UWLbKdQhJXlIrxs1Q25WomVNz1McMgUZmlME4OpNOI1KUMrOkR05LWsoU7PfXLI_EOKZdy6PCx9Bu7JBNTLbDn8RvdQA.webp", domesticTravel: true),
         ]
-    }
 }
 
