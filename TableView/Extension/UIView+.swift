@@ -14,6 +14,15 @@ extension UIView {
         self.layer.cornerRadius = style.cornerRadius
         self.layer.masksToBounds = true
     }
+    
+    func setRandomBackgroundColor() {
+        self.backgroundColor = UIColor(
+            red: CGFloat.random(in: 0...1),
+            green: CGFloat.random(in: 0...1),
+            blue: CGFloat.random(in: 0...1),
+            alpha: 0.5
+        )
+    }
 }
 
 enum CornerRoundStyle {

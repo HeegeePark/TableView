@@ -106,6 +106,13 @@ extension CityViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let viewController = self.storyboard?.instantiateViewController(identifier: CityDetailViewController.identifier) else {
+            return
+        }
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 // MARK: - UISearchBarDelegate

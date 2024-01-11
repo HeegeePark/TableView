@@ -16,6 +16,11 @@ extension UILabel {
         self.numberOfLines = style.numberOfLines
     }
     
+    func setBold() {
+        let fontSize = self.font.pointSize
+        self.font = .boldSystemFont(ofSize: fontSize)
+    }
+    
     // 날짜 포맷: String -> Date -> String
     func setDateText(data: String) {
         self.text = data.toDate()?.toString()

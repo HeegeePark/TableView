@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		4F10DADA2B4FDA4A00D58A09 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F10DAD92B4FDA4A00D58A09 /* Travel.swift */; };
+		4F10DADC2B4FE05D00D58A09 /* CityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F10DADB2B4FE05D00D58A09 /* CityDetailViewController.swift */; };
+		4F10DADE2B4FE09900D58A09 /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F10DADD2B4FE09900D58A09 /* ADViewController.swift */; };
+		4F10DAE22B4FE0C700D58A09 /* SpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F10DAE12B4FE0C700D58A09 /* SpotViewController.swift */; };
+		4F10DAE52B4FE13500D58A09 /* City.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F10DAE42B4FE13500D58A09 /* City.storyboard */; };
+		4F10DAE82B4FE66E00D58A09 /* SpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F10DAE62B4FE66E00D58A09 /* SpotTableViewCell.swift */; };
+		4F10DAE92B4FE66E00D58A09 /* SpotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F10DAE72B4FE66E00D58A09 /* SpotTableViewCell.xib */; };
+		4F10DAEC2B4FE67D00D58A09 /* ADTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F10DAEA2B4FE67D00D58A09 /* ADTableViewCell.swift */; };
+		4F10DAED2B4FE67D00D58A09 /* ADTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F10DAEB2B4FE67D00D58A09 /* ADTableViewCell.xib */; };
 		4F333CB02B4F762800FAA150 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F333CAF2B4F762800FAA150 /* UICollectionView+Extension.swift */; };
 		4F49DAC32B4D35A4005B0C1D /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAC22B4D35A4005B0C1D /* City.swift */; };
 		4F49DAC52B4D38F1005B0C1D /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAC42B4D38F1005B0C1D /* CityViewController.swift */; };
@@ -39,6 +47,14 @@
 
 /* Begin PBXFileReference section */
 		4F10DAD92B4FDA4A00D58A09 /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
+		4F10DADB2B4FE05D00D58A09 /* CityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewController.swift; sourceTree = "<group>"; };
+		4F10DADD2B4FE09900D58A09 /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
+		4F10DAE12B4FE0C700D58A09 /* SpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotViewController.swift; sourceTree = "<group>"; };
+		4F10DAE42B4FE13500D58A09 /* City.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = City.storyboard; sourceTree = "<group>"; };
+		4F10DAE62B4FE66E00D58A09 /* SpotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTableViewCell.swift; sourceTree = "<group>"; };
+		4F10DAE72B4FE66E00D58A09 /* SpotTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotTableViewCell.xib; sourceTree = "<group>"; };
+		4F10DAEA2B4FE67D00D58A09 /* ADTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADTableViewCell.swift; sourceTree = "<group>"; };
+		4F10DAEB2B4FE67D00D58A09 /* ADTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ADTableViewCell.xib; sourceTree = "<group>"; };
 		4F333CAF2B4F762800FAA150 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		4F49DAC22B4D35A4005B0C1D /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		4F49DAC42B4D38F1005B0C1D /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +97,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F10DADF2B4FE0A100D58A09 /* Spot */ = {
+			isa = PBXGroup;
+			children = (
+				4F10DAE62B4FE66E00D58A09 /* SpotTableViewCell.swift */,
+				4F10DAE72B4FE66E00D58A09 /* SpotTableViewCell.xib */,
+				4F10DAE12B4FE0C700D58A09 /* SpotViewController.swift */,
+			);
+			path = Spot;
+			sourceTree = "<group>";
+		};
+		4F10DAE02B4FE0B300D58A09 /* AD */ = {
+			isa = PBXGroup;
+			children = (
+				4F10DADD2B4FE09900D58A09 /* ADViewController.swift */,
+				4F10DAEA2B4FE67D00D58A09 /* ADTableViewCell.swift */,
+				4F10DAEB2B4FE67D00D58A09 /* ADTableViewCell.xib */,
+			);
+			path = AD;
+			sourceTree = "<group>";
+		};
+		4F10DAE32B4FE0E600D58A09 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4F10DAE02B4FE0B300D58A09 /* AD */,
+				4F10DADF2B4FE0A100D58A09 /* Spot */,
+				4F10DADB2B4FE05D00D58A09 /* CityDetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		4F49DABF2B4D351D005B0C1D /* Shopping */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,11 +151,13 @@
 		4F49DAC12B4D3593005B0C1D /* City */ = {
 			isa = PBXGroup;
 			children = (
+				4F10DAE32B4FE0E600D58A09 /* Detail */,
 				4F49DAC22B4D35A4005B0C1D /* City.swift */,
 				4F49DAC42B4D38F1005B0C1D /* CityViewController.swift */,
 				4F49DAC62B4D3915005B0C1D /* CityCollectionViewCell.swift */,
 				4F49DAC72B4D3915005B0C1D /* CityCollectionViewCell.xib */,
 				4F10DAD92B4FDA4A00D58A09 /* Travel.swift */,
+				4F10DAE42B4FE13500D58A09 /* City.storyboard */,
 			);
 			path = City;
 			sourceTree = "<group>";
@@ -237,8 +285,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F7F30A02B481F5700A28267 /* LaunchScreen.storyboard in Resources */,
+				4F10DAE92B4FE66E00D58A09 /* SpotTableViewCell.xib in Resources */,
 				4F7F309D2B481F5700A28267 /* Assets.xcassets in Resources */,
 				4F7F309B2B481F5500A28267 /* Main.storyboard in Resources */,
+				4F10DAE52B4FE13500D58A09 /* City.storyboard in Resources */,
+				4F10DAED2B4FE67D00D58A09 /* ADTableViewCell.xib in Resources */,
 				4F49DAC92B4D3915005B0C1D /* CityCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +305,7 @@
 				4F49DAC52B4D38F1005B0C1D /* CityViewController.swift in Sources */,
 				4F49DAE72B4E8D74005B0C1D /* UILabel+Extension.swift in Sources */,
 				4F10DADA2B4FDA4A00D58A09 /* Travel.swift in Sources */,
+				4F10DADC2B4FE05D00D58A09 /* CityDetailViewController.swift in Sources */,
 				4FA0976C2B4C747700E84B79 /* TravelTableViewController.swift in Sources */,
 				4F49DAC32B4D35A4005B0C1D /* City.swift in Sources */,
 				4F49DAE92B4EA63E005B0C1D /* Date+Extension.swift in Sources */,
@@ -265,6 +317,8 @@
 				4F49DAC82B4D3915005B0C1D /* CityCollectionViewCell.swift in Sources */,
 				4F49DAF42B4EC4D0005B0C1D /* UICollectionViewCellProtocol.swift in Sources */,
 				4F7F30982B481F5500A28267 /* ViewController.swift in Sources */,
+				4F10DAEC2B4FE67D00D58A09 /* ADTableViewCell.swift in Sources */,
+				4F10DADE2B4FE09900D58A09 /* ADViewController.swift in Sources */,
 				4FA097682B4C66E300E84B79 /* UserDefaults.swift in Sources */,
 				4F7F30942B481F5500A28267 /* AppDelegate.swift in Sources */,
 				4F49DAF62B4EC54A005B0C1D /* UITableViewCellProtocol.swift in Sources */,
@@ -272,6 +326,8 @@
 				4F7F30AA2B48FD6100A28267 /* ShoppingTableViewCell.swift in Sources */,
 				4FA097702B4C773B00E84B79 /* Magazine.swift in Sources */,
 				4F333CB02B4F762800FAA150 /* UICollectionView+Extension.swift in Sources */,
+				4F10DAE82B4FE66E00D58A09 /* SpotTableViewCell.swift in Sources */,
+				4F10DAE22B4FE0C700D58A09 /* SpotViewController.swift in Sources */,
 				4F7F30962B481F5500A28267 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
