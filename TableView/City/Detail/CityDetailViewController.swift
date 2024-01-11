@@ -21,9 +21,6 @@ enum CellType: CaseIterable {
     }
     
     // TODO: 제네릭으로 Cell 타입 반환해보기
-    
-    
-    
 }
 
 class CityDetailViewController: UIViewController {
@@ -82,6 +79,22 @@ extension CityDetailViewController: UITableViewDelegate, UITableViewDataSource {
             
             cell.bindItem(data: travel)
             return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let travel = Travel.dummy[indexPath.row]
+        let cellType: CellType = !travel.ad ? .spot: .ad
+        
+        switch cellType {
+        case .spot:
+            guard let viewController = self.storyboard?.instantiateViewController(identifier: SpotViewController.identifier) else { return }
+            navigationController?.pushViewController(viewController, animated: true)
+        case .ad:
+            guard let viewController = self.storyboard?.instantiateViewController(identifier: ADViewController.identifier) else { return }
+            let navigationVC = UINavigationController(rootViewController: viewController)
+            navigationVC.modalPresentationStyle = .fullScreen
+            present(navigationVC, animated: true)
         }
     }
 }
