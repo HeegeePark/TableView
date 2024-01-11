@@ -33,7 +33,7 @@ class CityDetailViewController: UIViewController {
         
         configureNavigationBar()
         configureTableView()
-    }    
+    }
 }
 
 // MARK: - Custom UI
@@ -75,11 +75,13 @@ extension CityDetailViewController: UITableViewDelegate, UITableViewDataSource {
         case .spot:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: cellType.cellReuseIdentifier, for: indexPath) as? SpotTableViewCell else { return UITableViewCell() }
             
+            cell.selectionStyle = .none
             cell.bindItem(data: travel)
             return cell
         case .ad:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: cellType.cellReuseIdentifier, for: indexPath) as? ADTableViewCell else { return UITableViewCell() }
             
+            cell.selectionStyle = .none
             cell.bindItem(data: travel)
             return cell
         }
