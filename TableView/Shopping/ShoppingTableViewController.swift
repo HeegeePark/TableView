@@ -47,7 +47,10 @@ class ShoppingTableViewController: UITableViewController {
     func isExistContent(_ content: String) -> Bool {
         return !content.replacingOccurrences(of: " ", with: "").isEmpty
     }
-    
+}
+
+// MARK: - Custom UI
+extension ShoppingTableViewController: CustomViewControllerProtocol {
     // UI 디자인
     func setupUI() {
         // 테이블뷰
@@ -74,8 +77,10 @@ class ShoppingTableViewController: UITableViewController {
         addButton.setButton(style: style)
         addButton.setCornerRadius(style: .small)
     }
-    
-    // MARK: - UITableView
+}
+
+// MARK: - UITableView
+extension ShoppingTableViewController {
     // cell 개수
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return shoppingList.count

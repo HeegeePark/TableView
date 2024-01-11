@@ -13,10 +13,20 @@ class TravelTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureTableView()
+    }
+}
+
+// MARK: - Custom UI
+extension TravelTableViewController {
+    func configureTableView() {
         tableView.rowHeight = 460
         tableView.separatorStyle = .none
     }
+}
 
+// MARK: - UITableView
+extension TravelTableViewController {
     // 셀 개수
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count

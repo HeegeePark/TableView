@@ -22,7 +22,9 @@ class SpotViewController: UIViewController {
 }
 
 // MARK: - Custom UI
-extension SpotViewController {
+extension SpotViewController: CustomViewControllerProtocol {
+    func setupUI() {}
+    
     func configureNavigationBar() {
         navigationItem.title = "관광지 화면"
         navigationController?.navigationBar.backgroundColor = .clear

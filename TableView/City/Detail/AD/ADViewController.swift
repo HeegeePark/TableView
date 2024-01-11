@@ -22,7 +22,9 @@ class ADViewController: UIViewController {
 }
 
 // MARK: - Custom UI
-extension ADViewController {
+extension ADViewController: CustomViewControllerProtocol {
+    func setupUI() {}
+    
     func configureNavigationBar() {
         navigationItem.title = "광고 화면"
         

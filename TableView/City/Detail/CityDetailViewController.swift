@@ -38,7 +38,9 @@ class CityDetailViewController: UIViewController {
 
 // MARK: - Custom UI
 
-extension CityDetailViewController {
+extension CityDetailViewController: CustomViewControllerProtocol, UITableViewControllerProtocol {
+    func setupUI() {}
+    
     func configureNavigationBar() {
         navigationItem.title = "도시 상세 정보"
     }
@@ -62,6 +64,7 @@ extension CityDetailViewController {
     }
 }
 
+// MARK: - UITableViewDelegate, UITableViewDataSource
 extension CityDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         Travel.dummy.count

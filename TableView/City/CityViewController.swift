@@ -44,7 +44,7 @@ class CityViewController: UIViewController {
         cityList = self.cityType.cityList
         
         setSearchBar()
-        setCollectionView()
+        configureCollectionView()
         setSegmentControl()
     }
     
@@ -56,16 +56,18 @@ class CityViewController: UIViewController {
 }
 
 // MARK: - Custom UI 관련
-extension CityViewController {
+extension CityViewController: CustomViewControllerProtocol, UICollectionViewControllerProtocol {
+    func setupUI() {}
+    
     func setSearchBar() {
         searchBar.placeholder = "가고 싶은 도시를 입력해주세요"
         searchBar.delegate = self
     }
     
-    func setCollectionView() {
+    func configureCollectionView() {
         registerXib()
         connectDelegate()
-        collectionView.setLayout(inset: 20, spacing: 20, ratio: 1.4, colCount: 2)
+        configureLayout()
     }
     
     // XIB 셀 연결
@@ -78,6 +80,10 @@ extension CityViewController {
     func connectDelegate() {
         collectionView.dataSource = self
         collectionView.delegate = self
+    }
+    
+    func configureLayout() {
+        collectionView.setLayout(inset: 20, spacing: 20, ratio: 1.4, colCount: 2)
     }
     
     // 세그먼트 컨트롤 셋업
