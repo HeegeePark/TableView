@@ -48,6 +48,15 @@ class CityViewController: UIViewController {
         setSegmentControl()
     }
     
+    // segmentedControl 값 변경 시
+    @objc func segmentChanged(_ sender: UISegmentedControl) {
+        cityType = CityType.allCases[sender.selectedSegmentIndex]
+        searchBar(searchBar, textDidChange: searchBar.text ?? "")
+    }
+}
+
+// MARK: - Custom UI 관련
+extension CityViewController {
     func setSearchBar() {
         searchBar.placeholder = "가고 싶은 도시를 입력해주세요"
         searchBar.delegate = self
@@ -57,9 +66,6 @@ class CityViewController: UIViewController {
         registerXib()
         connectDelegate()
         collectionView.setLayout(inset: 20, spacing: 20, ratio: 1.4, colCount: 2)
-    }
-    @IBAction func keyboardDismiss(_ sender: UITapGestureRecognizer) {
-        searchBar.resignFirstResponder()
     }
     
     // XIB 셀 연결
@@ -74,6 +80,7 @@ class CityViewController: UIViewController {
         collectionView.delegate = self
     }
     
+    // 세그먼트 컨트롤 셋업
     func setSegmentControl() {
         for (i, type) in CityType.allCases.enumerated() {
             citySegmentControl.setTitle(type.rawValue, forSegmentAt: i)
@@ -81,14 +88,9 @@ class CityViewController: UIViewController {
         citySegmentControl.setTitleTextAttributes([.font: UIFont.boldSystemFont(ofSize: 14)], for: .selected)
         citySegmentControl.addTarget(self, action: #selector(segmentChanged), for: .valueChanged)
     }
-    
-    // segmentedControl 값 변경 시
-    @objc func segmentChanged(_ sender: UISegmentedControl) {
-        cityType = CityType.allCases[sender.selectedSegmentIndex]
-        searchBar(searchBar, textDidChange: searchBar.text ?? "")
-    }
 }
 
+// MARK: - UICollectionViewDataSource, UICollectionViewDelegate
 extension CityViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cityList.count
@@ -106,6 +108,7 @@ extension CityViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
 }
 
+// MARK: - UISearchBarDelegate
 extension CityViewController: UISearchBarDelegate {
     // 텍스트가 바뀔 때
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
