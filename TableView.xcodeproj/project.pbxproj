@@ -25,8 +25,8 @@
 		4F49DAE72B4E8D74005B0C1D /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAE62B4E8D74005B0C1D /* UILabel+Extension.swift */; };
 		4F49DAE92B4EA63E005B0C1D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAE82B4EA63E005B0C1D /* Date+Extension.swift */; };
 		4F49DAEB2B4EA64A005B0C1D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAEA2B4EA64A005B0C1D /* String+Extension.swift */; };
-		4F49DAEF2B4EAB2C005B0C1D /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAEE2B4EAB2C005B0C1D /* UIView+.swift */; };
-		4F49DAF12B4EB71D005B0C1D /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAF02B4EB71D005B0C1D /* UIButton+.swift */; };
+		4F49DAEF2B4EAB2C005B0C1D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAEE2B4EAB2C005B0C1D /* UIView+Extension.swift */; };
+		4F49DAF12B4EB71D005B0C1D /* UIButton+Extension+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAF02B4EB71D005B0C1D /* UIButton+Extension+Extension.swift */; };
 		4F49DAF42B4EC4D0005B0C1D /* UICollectionViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAF32B4EC4D0005B0C1D /* UICollectionViewCellProtocol.swift */; };
 		4F49DAF62B4EC54A005B0C1D /* UITableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAF52B4EC54A005B0C1D /* UITableViewCellProtocol.swift */; };
 		4F7F30942B481F5500A28267 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30932B481F5500A28267 /* AppDelegate.swift */; };
@@ -65,8 +65,8 @@
 		4F49DAE62B4E8D74005B0C1D /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		4F49DAE82B4EA63E005B0C1D /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		4F49DAEA2B4EA64A005B0C1D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		4F49DAEE2B4EAB2C005B0C1D /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
-		4F49DAF02B4EB71D005B0C1D /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		4F49DAEE2B4EAB2C005B0C1D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		4F49DAF02B4EB71D005B0C1D /* UIButton+Extension+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension+Extension.swift"; sourceTree = "<group>"; };
 		4F49DAF32B4EC4D0005B0C1D /* UICollectionViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellProtocol.swift; sourceTree = "<group>"; };
 		4F49DAF52B4EC54A005B0C1D /* UITableViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellProtocol.swift; sourceTree = "<group>"; };
 		4F7F30902B481F5500A28267 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,8 +170,8 @@
 				4F49DAE62B4E8D74005B0C1D /* UILabel+Extension.swift */,
 				4F49DAE82B4EA63E005B0C1D /* Date+Extension.swift */,
 				4F49DAEA2B4EA64A005B0C1D /* String+Extension.swift */,
-				4F49DAEE2B4EAB2C005B0C1D /* UIView+.swift */,
-				4F49DAF02B4EB71D005B0C1D /* UIButton+.swift */,
+				4F49DAEE2B4EAB2C005B0C1D /* UIView+Extension.swift */,
+				4F49DAF02B4EB71D005B0C1D /* UIButton+Extension+Extension.swift */,
 				4F333CAF2B4F762800FAA150 /* UICollectionView+Extension.swift */,
 				4F10DAEE2B50870600D58A09 /* Int+Extension.swift */,
 			);
@@ -312,7 +312,7 @@
 				4FA0976C2B4C747700E84B79 /* TravelTableViewController.swift in Sources */,
 				4F49DAC32B4D35A4005B0C1D /* City.swift in Sources */,
 				4F49DAE92B4EA63E005B0C1D /* Date+Extension.swift in Sources */,
-				4F49DAF12B4EB71D005B0C1D /* UIButton+.swift in Sources */,
+				4F49DAF12B4EB71D005B0C1D /* UIButton+Extension+Extension.swift in Sources */,
 				4FA0976A2B4C6D0C00E84B79 /* Shopping.swift in Sources */,
 				4FA0976E2B4C748B00E84B79 /* TravelTableViewCell.swift in Sources */,
 				4F49DAEB2B4EA64A005B0C1D /* String+Extension.swift in Sources */,
@@ -326,7 +326,7 @@
 				4F7F30942B481F5500A28267 /* AppDelegate.swift in Sources */,
 				4F10DAEF2B50870600D58A09 /* Int+Extension.swift in Sources */,
 				4F49DAF62B4EC54A005B0C1D /* UITableViewCellProtocol.swift in Sources */,
-				4F49DAEF2B4EAB2C005B0C1D /* UIView+.swift in Sources */,
+				4F49DAEF2B4EAB2C005B0C1D /* UIView+Extension.swift in Sources */,
 				4F7F30AA2B48FD6100A28267 /* ShoppingTableViewCell.swift in Sources */,
 				4FA097702B4C773B00E84B79 /* Magazine.swift in Sources */,
 				4F333CB02B4F762800FAA150 /* UICollectionView+Extension.swift in Sources */,
