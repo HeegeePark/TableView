@@ -57,7 +57,7 @@ extension SpotTableViewCell: UITableViewCellProtocol {
         
         setStarImage(grade: travel.grade!)
         
-        saveLabel.text = "• 저장 \(travel.save!)"
+        saveLabel.text = "• 저장 \(travel.save!.setComma())"
         
         var style = ButtonStyle.default
         style.image = !travel.like! ? UIImage(systemName: "heart"): UIImage(systemName: "heart.fill")
