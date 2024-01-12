@@ -73,6 +73,7 @@ extension ShoppingTableViewController: CustomViewControllerProtocol {
         // 헤더뷰 추가 버튼
         var style = ButtonStyle.default
         style.title = "추가"
+        style.titleFont = .systemFont(ofSize: 12)
         style.backgroundColor = #colorLiteral(red: 0.8975048065, green: 0.8984213471, blue: 0.9142318368, alpha: 1)
         addButton.setButton(style: style)
         addButton.setCornerRadius(style: .small)
