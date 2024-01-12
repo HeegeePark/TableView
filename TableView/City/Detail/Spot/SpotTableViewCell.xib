@@ -17,13 +17,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tittle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLP-IT-404">
-                        <rect key="frame" x="15.999999999999986" y="8" width="232.66666666666663" height="21"/>
+                        <rect key="frame" x="15.999999999999986" y="16" width="232.66666666666663" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKe-gH-tET">
-                        <rect key="frame" x="15.999999999999986" y="33" width="232.66666666666663" height="21"/>
+                        <rect key="frame" x="15.999999999999986" y="41" width="232.66666666666663" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -43,7 +43,7 @@
                         <buttonConfiguration key="configuration" style="plain" title="btn"/>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzx-Dm-oy5">
-                        <rect key="frame" x="16" y="58" width="87" height="15"/>
+                        <rect key="frame" x="16" y="66" width="87" height="15"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RjV-do-2NJ">
                                 <rect key="frame" x="19" y="0.0" width="15" height="15"/>
@@ -103,7 +103,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="save" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTJ-qX-RMR">
-                        <rect key="frame" x="102.99999999999999" y="58" width="153.66666666666663" height="21"/>
+                        <rect key="frame" x="102.99999999999999" y="66" width="153.66666666666663" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -125,7 +125,7 @@
                     <constraint firstItem="7sH-RU-nsY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="UVN-Bc-cJX"/>
                     <constraint firstItem="7sH-RU-nsY" firstAttribute="leading" secondItem="MKe-gH-tET" secondAttribute="trailing" constant="16" id="WNN-9I-om4"/>
                     <constraint firstItem="UTJ-qX-RMR" firstAttribute="leading" secondItem="yzx-Dm-oy5" secondAttribute="trailing" id="XIA-Wq-787"/>
-                    <constraint firstItem="XLP-IT-404" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="aOs-rl-QZX"/>
+                    <constraint firstItem="XLP-IT-404" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="aOs-rl-QZX"/>
                     <constraint firstItem="7sH-RU-nsY" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.2" id="hgO-Ea-V8g"/>
                     <constraint firstItem="7cQ-wR-UO0" firstAttribute="width" secondItem="7sH-RU-nsY" secondAttribute="width" multiplier="0.3" id="v2r-At-8RP"/>
                     <constraint firstItem="7cQ-wR-UO0" firstAttribute="top" secondItem="7sH-RU-nsY" secondAttribute="top" constant="4" id="vfg-g2-dsW"/>
