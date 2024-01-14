@@ -28,8 +28,8 @@
 		4F10DB052B51344F00D58A09 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F10DB042B51344F00D58A09 /* ChatViewController.swift */; };
 		4F10DB0B2B51363C00D58A09 /* TravelTalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F10DB092B51363C00D58A09 /* TravelTalkTableViewCell.swift */; };
 		4F10DB0C2B51363C00D58A09 /* TravelTalkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F10DB0A2B51363C00D58A09 /* TravelTalkTableViewCell.xib */; };
-		4F10DB0F2B51364C00D58A09 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F10DB0D2B51364C00D58A09 /* ChatTableViewCell.swift */; };
-		4F10DB102B51364C00D58A09 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F10DB0E2B51364C00D58A09 /* ChatTableViewCell.xib */; };
+		4F10DB0F2B51364C00D58A09 /* ChatReceiverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F10DB0D2B51364C00D58A09 /* ChatReceiverTableViewCell.swift */; };
+		4F10DB102B51364C00D58A09 /* ChatReceiverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F10DB0E2B51364C00D58A09 /* ChatReceiverTableViewCell.xib */; };
 		4F333CB02B4F762800FAA150 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F333CAF2B4F762800FAA150 /* UICollectionView+Extension.swift */; };
 		4F49DAC32B4D35A4005B0C1D /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAC22B4D35A4005B0C1D /* City.swift */; };
 		4F49DAC52B4D38F1005B0C1D /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAC42B4D38F1005B0C1D /* CityViewController.swift */; };
@@ -42,6 +42,9 @@
 		4F49DAF12B4EB71D005B0C1D /* UIButton+Extension+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAF02B4EB71D005B0C1D /* UIButton+Extension+Extension.swift */; };
 		4F49DAF42B4EC4D0005B0C1D /* UICollectionViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAF32B4EC4D0005B0C1D /* UICollectionViewCellProtocol.swift */; };
 		4F49DAF62B4EC54A005B0C1D /* UITableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49DAF52B4EC54A005B0C1D /* UITableViewCellProtocol.swift */; };
+		4F4DCB3C2B54192E004C644D /* ChatUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB3A2B54192E004C644D /* ChatUserTableViewCell.swift */; };
+		4F4DCB3D2B54192E004C644D /* ChatUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DCB3B2B54192E004C644D /* ChatUserTableViewCell.xib */; };
+		4F4DCB3F2B54970D004C644D /* BubbleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB3E2B54970D004C644D /* BubbleLabel.swift */; };
 		4F7F30942B481F5500A28267 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30932B481F5500A28267 /* AppDelegate.swift */; };
 		4F7F30962B481F5500A28267 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30952B481F5500A28267 /* SceneDelegate.swift */; };
 		4F7F30982B481F5500A28267 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30972B481F5500A28267 /* ViewController.swift */; };
@@ -79,8 +82,8 @@
 		4F10DB042B51344F00D58A09 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		4F10DB092B51363C00D58A09 /* TravelTalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTalkTableViewCell.swift; sourceTree = "<group>"; };
 		4F10DB0A2B51363C00D58A09 /* TravelTalkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelTalkTableViewCell.xib; sourceTree = "<group>"; };
-		4F10DB0D2B51364C00D58A09 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
-		4F10DB0E2B51364C00D58A09 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
+		4F10DB0D2B51364C00D58A09 /* ChatReceiverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatReceiverTableViewCell.swift; sourceTree = "<group>"; };
+		4F10DB0E2B51364C00D58A09 /* ChatReceiverTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatReceiverTableViewCell.xib; sourceTree = "<group>"; };
 		4F333CAF2B4F762800FAA150 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		4F49DAC22B4D35A4005B0C1D /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		4F49DAC42B4D38F1005B0C1D /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +96,9 @@
 		4F49DAF02B4EB71D005B0C1D /* UIButton+Extension+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension+Extension.swift"; sourceTree = "<group>"; };
 		4F49DAF32B4EC4D0005B0C1D /* UICollectionViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellProtocol.swift; sourceTree = "<group>"; };
 		4F49DAF52B4EC54A005B0C1D /* UITableViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellProtocol.swift; sourceTree = "<group>"; };
+		4F4DCB3A2B54192E004C644D /* ChatUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUserTableViewCell.swift; sourceTree = "<group>"; };
+		4F4DCB3B2B54192E004C644D /* ChatUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatUserTableViewCell.xib; sourceTree = "<group>"; };
+		4F4DCB3E2B54970D004C644D /* BubbleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleLabel.swift; sourceTree = "<group>"; };
 		4F7F30902B481F5500A28267 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7F30932B481F5500A28267 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F7F30952B481F5500A28267 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 				4F10DB072B5134BE00D58A09 /* ViewController */,
 				4F10DB062B51346B00D58A09 /* Model */,
 				4F10DB002B5133CD00D58A09 /* Chat.storyboard */,
+				4F4DCB3E2B54970D004C644D /* BubbleLabel.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -187,8 +194,10 @@
 			children = (
 				4F10DB092B51363C00D58A09 /* TravelTalkTableViewCell.swift */,
 				4F10DB0A2B51363C00D58A09 /* TravelTalkTableViewCell.xib */,
-				4F10DB0D2B51364C00D58A09 /* ChatTableViewCell.swift */,
-				4F10DB0E2B51364C00D58A09 /* ChatTableViewCell.xib */,
+				4F10DB0D2B51364C00D58A09 /* ChatReceiverTableViewCell.swift */,
+				4F10DB0E2B51364C00D58A09 /* ChatReceiverTableViewCell.xib */,
+				4F4DCB3A2B54192E004C644D /* ChatUserTableViewCell.swift */,
+				4F4DCB3B2B54192E004C644D /* ChatUserTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -361,8 +370,9 @@
 				4F10DB0C2B51363C00D58A09 /* TravelTalkTableViewCell.xib in Resources */,
 				4F7F309B2B481F5500A28267 /* Main.storyboard in Resources */,
 				4F10DAE52B4FE13500D58A09 /* City.storyboard in Resources */,
+				4F4DCB3D2B54192E004C644D /* ChatUserTableViewCell.xib in Resources */,
 				4F10DAED2B4FE67D00D58A09 /* ADTableViewCell.xib in Resources */,
-				4F10DB102B51364C00D58A09 /* ChatTableViewCell.xib in Resources */,
+				4F10DB102B51364C00D58A09 /* ChatReceiverTableViewCell.xib in Resources */,
 				4F10DB012B5133CD00D58A09 /* Chat.storyboard in Resources */,
 				4F49DAC92B4D3915005B0C1D /* CityCollectionViewCell.xib in Resources */,
 			);
@@ -375,12 +385,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F4DCB3F2B54970D004C644D /* BubbleLabel.swift in Sources */,
 				4F7F30A82B482A1100A28267 /* SettingTableViewController.swift in Sources */,
 				4F49DAC52B4D38F1005B0C1D /* CityViewController.swift in Sources */,
 				4F49DAE72B4E8D74005B0C1D /* UILabel+Extension.swift in Sources */,
 				4F10DADA2B4FDA4A00D58A09 /* Travel.swift in Sources */,
 				4F10DADC2B4FE05D00D58A09 /* CityDetailViewController.swift in Sources */,
-				4F10DB0F2B51364C00D58A09 /* ChatTableViewCell.swift in Sources */,
+				4F10DB0F2B51364C00D58A09 /* ChatReceiverTableViewCell.swift in Sources */,
 				4FA0976C2B4C747700E84B79 /* TravelTableViewController.swift in Sources */,
 				4F49DAC32B4D35A4005B0C1D /* City.swift in Sources */,
 				4F49DAE92B4EA63E005B0C1D /* Date+Extension.swift in Sources */,
@@ -403,6 +414,7 @@
 				4F10DAF12B50975D00D58A09 /* CustomViewControllerProtocol.swift in Sources */,
 				4F49DAF62B4EC54A005B0C1D /* UITableViewCellProtocol.swift in Sources */,
 				4F10DB0B2B51363C00D58A09 /* TravelTalkTableViewCell.swift in Sources */,
+				4F4DCB3C2B54192E004C644D /* ChatUserTableViewCell.swift in Sources */,
 				4F49DAEF2B4EAB2C005B0C1D /* UIView+Extension.swift in Sources */,
 				4F7F30AA2B48FD6100A28267 /* ShoppingTableViewCell.swift in Sources */,
 				4FA097702B4C773B00E84B79 /* Magazine.swift in Sources */,

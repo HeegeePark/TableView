@@ -65,4 +65,16 @@ extension TravelTalkViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chatRoom = ChatRoom.mockChatList[indexPath.row]
+        
+        guard let viewController = storyboard?.instantiateViewController(withIdentifier: ChatViewController.identifier) as? ChatViewController else {
+            return
+        }
+        
+        viewController.updateData(data: chatRoom)
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }

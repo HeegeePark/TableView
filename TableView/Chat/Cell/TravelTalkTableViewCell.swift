@@ -60,6 +60,7 @@ extension TravelTalkTableViewCell: UITableViewCellProtocol {
         
         // 닉네임 레이블
         chatroomNameLabel.setLabel()
+        chatroomNameLabel.setBold()
         chatroomNameLabel.numberOfLines = 1
         
         // 최근 채팅 레이블

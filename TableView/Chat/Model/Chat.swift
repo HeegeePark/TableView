@@ -5,7 +5,7 @@
 //  Created by 박희지 on 1/12/24.
 //
 
-import Foundation
+import UIKit
 
 //트래블톡 화면에서 사용할 데이터 구조체
 struct ChatRoom {
@@ -54,6 +54,24 @@ struct Chat {
     let user: User
     let date: String
     let message: String
+    
+    var isUserChat: Bool {   // 채팅 수신/발신 구분 Bool
+        return user == User.user
+    }
+    
+    var userName: String {
+        return user.rawValue
+    }
+    
+    var profileImage: UIImage {
+        return UIImage(named: user.profileImage)!
+    }
+    
+    var dateFormattedString: String {    // fomat한 채팅 시간
+        return date
+            .toDate(format: "yyyy-MM-dd HH:mm")?
+            .toString(format: "HH:mm a") ?? "알 수 없음."
+    }
 }
 
 extension ChatRoom {

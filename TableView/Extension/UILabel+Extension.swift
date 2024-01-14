@@ -16,6 +16,7 @@ extension UILabel {
         self.numberOfLines = style.numberOfLines
     }
     
+    // bold체로 바꾸기
     func setBold() {
         let fontSize = self.font.pointSize
         self.font = .boldSystemFont(ofSize: fontSize)

@@ -56,16 +56,71 @@
                     <view key="view" contentMode="scaleToFill" id="8mg-Jv-XE6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FAx-Nt-cDx">
+                                <rect key="frame" x="0.0" y="59" width="393" height="679"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzJ-7G-Shj">
+                                <rect key="frame" x="0.0" y="738" width="393" height="80"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nW8-DT-HP8">
+                                        <rect key="frame" x="20" y="16" width="353" height="48"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93r-1z-3Kw">
+                                        <rect key="frame" x="337" y="28" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="93r-1z-3Kw" secondAttribute="height" multiplier="1:1" id="eAc-rs-fYB"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="93r-1z-3Kw" firstAttribute="height" secondItem="nW8-DT-HP8" secondAttribute="height" multiplier="0.5" id="Jmp-ut-zI7"/>
+                                    <constraint firstAttribute="trailing" secondItem="nW8-DT-HP8" secondAttribute="trailing" constant="20" id="MJH-GT-CIi"/>
+                                    <constraint firstItem="93r-1z-3Kw" firstAttribute="centerY" secondItem="nW8-DT-HP8" secondAttribute="centerY" id="S18-kc-kSf"/>
+                                    <constraint firstAttribute="bottom" secondItem="nW8-DT-HP8" secondAttribute="bottom" constant="16" id="UTC-dV-QKk"/>
+                                    <constraint firstAttribute="height" constant="80" id="aEp-0v-ap1"/>
+                                    <constraint firstItem="nW8-DT-HP8" firstAttribute="top" secondItem="dzJ-7G-Shj" secondAttribute="top" constant="16" id="evb-fB-Cwj"/>
+                                    <constraint firstItem="93r-1z-3Kw" firstAttribute="trailing" secondItem="nW8-DT-HP8" secondAttribute="trailing" constant="-12" id="oPs-I5-CmF"/>
+                                    <constraint firstItem="nW8-DT-HP8" firstAttribute="leading" secondItem="dzJ-7G-Shj" secondAttribute="leading" constant="20" id="s6a-Vg-Z4z"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="thA-go-Nfa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FAx-Nt-cDx" firstAttribute="top" secondItem="thA-go-Nfa" secondAttribute="top" id="0Bc-Re-MV0"/>
+                            <constraint firstItem="dzJ-7G-Shj" firstAttribute="trailing" secondItem="thA-go-Nfa" secondAttribute="trailing" id="bDy-ox-5hJ"/>
+                            <constraint firstItem="dzJ-7G-Shj" firstAttribute="bottom" secondItem="thA-go-Nfa" secondAttribute="bottom" id="dE5-9X-npF"/>
+                            <constraint firstItem="thA-go-Nfa" firstAttribute="trailing" secondItem="FAx-Nt-cDx" secondAttribute="trailing" id="ee9-RN-kv4"/>
+                            <constraint firstItem="dzJ-7G-Shj" firstAttribute="leading" secondItem="thA-go-Nfa" secondAttribute="leading" id="iIc-x8-LqH"/>
+                            <constraint firstItem="dzJ-7G-Shj" firstAttribute="top" secondItem="FAx-Nt-cDx" secondAttribute="bottom" id="lm9-Uf-S3A"/>
+                            <constraint firstItem="FAx-Nt-cDx" firstAttribute="leading" secondItem="thA-go-Nfa" secondAttribute="leading" id="vqw-N8-gdb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputAreaView" destination="dzJ-7G-Shj" id="HNH-7v-Ame"/>
+                        <outlet property="inputTextButton" destination="93r-1z-3Kw" id="qFF-0c-0We"/>
+                        <outlet property="inputTextView" destination="nW8-DT-HP8" id="uSh-CR-sDl"/>
+                        <outlet property="tableView" destination="FAx-Nt-cDx" id="tAq-cV-a6A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Yl-IH-1Nk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="958" y="5"/>
+            <point key="canvasLocation" x="956.48854961832058" y="4.9295774647887329"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
