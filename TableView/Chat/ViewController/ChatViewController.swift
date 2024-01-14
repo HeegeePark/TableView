@@ -25,6 +25,7 @@ class ChatViewController: UIViewController {
         setupUI()
         configureNavigationBar()
         configureTableView()
+        scrollToBottom()
     }
     
     func updateData(data: ChatRoom) {
@@ -33,6 +34,13 @@ class ChatViewController: UIViewController {
     
     @objc func popButtonTapped() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    func scrollToBottom() {
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(row: self.chatRoom!.lastChatRow, section: 0)
+            self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+        }
     }
 
 }

@@ -47,6 +47,10 @@ struct ChatRoom {
             .toDate(format: "yyyy-MM-dd HH:mm")?
             .toString(format: "yy.MM.dd") ?? "알 수 없음."
     }
+    
+    var lastChatRow: Int {    // 마지막 채팅 row
+        return self.chatList.count - 1
+    }
 }
 
 //채팅 화면에서 사용할 데이터 구조체
