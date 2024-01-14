@@ -32,6 +32,7 @@ extension TravelTalkViewController: CustomViewControllerProtocol, UITableViewCon
         registerXib()
         connectDelegate()
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.separatorStyle = .none
     }
     
     func registerXib() {
@@ -52,9 +53,15 @@ extension TravelTalkViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print(#function)
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TravelTalkTableViewCell.identifier, for: indexPath) as? TravelTalkTableViewCell else {
             return UITableViewCell()
         }
+        
+        let chatRoom = ChatRoom.mockChatList[indexPath.row]
+        
+        cell.bindItem(data: chatRoom)
+        cell.selectionStyle = .none
         
         return cell
     }

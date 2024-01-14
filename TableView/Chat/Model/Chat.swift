@@ -13,6 +13,40 @@ struct ChatRoom {
     let chatroomImage: [String] //채팅방 이미지
     let chatroomName: String //채팅방 이름
     var chatList: [Chat] = [] //채팅 화면에서 사용할 데이터
+    
+    enum ProfileImageViewType: Int {
+        case one
+        case two
+        case three
+        case fourPlus
+    }
+    
+    var profileType: ProfileImageViewType {  // 채팅 인원 수에 따른 프로필 뷰 타입
+        switch chatroomImage.count {
+        case 1:
+            return .one
+        case 2:
+            return .two
+        case 3:
+            return .three
+        default:
+            return .fourPlus
+        }
+    }
+    
+    var profileImageViewIndex: Int {    // 프로필 뷰 타입 index
+        return self.profileType.rawValue
+    }
+    
+    var recentChatMessage: String {    // 최근 채팅 메시지
+        return self.chatList.last?.message ?? "알 수 없음."
+    }
+    
+    var recentChatDate: String {    // 최근 채팅 시간
+        return self.chatList.last?.date
+            .toDate(format: "yyyy-MM-dd HH:mm")?
+            .toString(format: "yy.MM.dd") ?? "알 수 없음."
+    }
 }
 
 //채팅 화면에서 사용할 데이터 구조체
@@ -63,7 +97,7 @@ extension ChatRoom {
                          message: "화이팅 ^^"),
                  ]),
         ChatRoom(chatroomId: 3,
-                 chatroomImage: [User.hue.profileImage],
+                 chatroomImage: [User.jack.profileImage],
                  chatroomName: User.jack.rawValue,
                  chatList: [
                     Chat(user: .jack,
@@ -200,5 +234,185 @@ extension ChatRoom {
                          message: "아닛 주말에 과제라닛"),
                  ]
                 ),
+        ChatRoom(chatroomId: 8,
+                 chatroomImage: [User.hue.profileImage, User.jack.profileImage, User.bran.profileImage, User.den.profileImage],
+                 chatroomName: "도봉 멘토방",
+                 chatList: [
+                    Chat(user: .hue,
+                         date: "2024-01-12 21:30",
+                         message: "열심히 일 하시고 계시는거죠?"),
+                    Chat(user: .bran,
+                         date: "2024-01-12 22:32",
+                         message: "도봉 캠퍼스 가고싶어요..."),
+                    Chat(user: .jack,
+                         date: "2024-01-12 22:38",
+                         message: "화이팅!!"),
+                    Chat(user: .den,
+                         date: "2024-01-12 23:42",
+                         message: "열심히 하고 있습니다!!"),
+                 ]
+                ),
+        ChatRoom(chatroomId: 9,
+                 chatroomImage: [User.hue.profileImage],
+                 chatroomName: "도봉 멘토방 hue",
+                 chatList: [
+                    Chat(user: .hue,
+                         date: "2024-01-12 21:30",
+                         message: "열심히 일 하시고 계시는거죠?"),
+                    Chat(user: .bran,
+                         date: "2024-01-12 22:32",
+                         message: "도봉 캠퍼스 가고싶어요..."),
+                    Chat(user: .jack,
+                         date: "2024-01-12 22:38",
+                         message: "화이팅!!"),
+                    Chat(user: .den,
+                         date: "2024-01-12 23:42",
+                         message: "열심히 하고 있습니다!!"),
+                 ]
+                ),
+        ChatRoom(chatroomId: 10,
+                 chatroomImage: [User.hue.profileImage, User.jack.profileImage, User.bran.profileImage],
+                 chatroomName: "도봉 멘토방 2명이오",
+                 chatList: [
+                    Chat(user: .hue,
+                         date: "2024-01-12 21:30",
+                         message: "열심히 일 하시고 계시는거죠?"),
+                    Chat(user: .bran,
+                         date: "2024-01-12 22:32",
+                         message: "도봉 캠퍼스 가고싶어요..."),
+                    Chat(user: .jack,
+                         date: "2024-01-12 22:38",
+                         message: "화이팅!!"),
+                    Chat(user: .den,
+                         date: "2024-01-12 23:42",
+                         message: "열심히 하고 있습니다!!"),
+                 ]
+                ),
+        ChatRoom(chatroomId: 11,
+                 chatroomImage: [User.jack.profileImage, User.den.profileImage],
+                 chatroomName: "도봉 멘토방 남으세요",
+                 chatList: [
+                    Chat(user: .hue,
+                         date: "2024-01-12 21:30",
+                         message: "열심히 일 하시고 계시는거죠?"),
+                    Chat(user: .bran,
+                         date: "2024-01-12 22:32",
+                         message: "도봉 캠퍼스 가고싶어요..."),
+                    Chat(user: .jack,
+                         date: "2024-01-12 22:38",
+                         message: "화이팅!!"),
+                    Chat(user: .den,
+                         date: "2024-01-12 23:42",
+                         message: "열심히 하고 있습니다!!"),
+                 ]
+                ),
+        ChatRoom(chatroomId: 11,
+                 chatroomImage: [User.jack.profileImage, User.den.profileImage],
+                 chatroomName: "도봉 멘토방 남으세요",
+                 chatList: [
+                    Chat(user: .hue,
+                         date: "2024-01-12 21:30",
+                         message: "열심히 일 하시고 계시는거죠?"),
+                    Chat(user: .bran,
+                         date: "2024-01-12 22:32",
+                         message: "도봉 캠퍼스 가고싶어요..."),
+                    Chat(user: .jack,
+                         date: "2024-01-12 22:38",
+                         message: "화이팅!!"),
+                    Chat(user: .den,
+                         date: "2024-01-12 23:42",
+                         message: "열심히 하고 있습니다!!"),
+                 ]
+                ),
+        ChatRoom(chatroomId: 11,
+                 chatroomImage: [User.jack.profileImage, User.den.profileImage],
+                 chatroomName: "도봉 멘토방 남으세요",
+                 chatList: [
+                    Chat(user: .hue,
+                         date: "2024-01-12 21:30",
+                         message: "열심히 일 하시고 계시는거죠?"),
+                    Chat(user: .bran,
+                         date: "2024-01-12 22:32",
+                         message: "도봉 캠퍼스 가고싶어요..."),
+                    Chat(user: .jack,
+                         date: "2024-01-12 22:38",
+                         message: "화이팅!!"),
+                    Chat(user: .den,
+                         date: "2024-01-12 23:42",
+                         message: "열심히 하고 있습니다!!"),
+                 ]
+                ),
+        ChatRoom(chatroomId: 11,
+                 chatroomImage: [User.jack.profileImage, User.den.profileImage],
+                 chatroomName: "도봉 멘토방 남으세요",
+                 chatList: [
+                    Chat(user: .hue,
+                         date: "2024-01-12 21:30",
+                         message: "열심히 일 하시고 계시는거죠?"),
+                    Chat(user: .bran,
+                         date: "2024-01-12 22:32",
+                         message: "도봉 캠퍼스 가고싶어요..."),
+                    Chat(user: .jack,
+                         date: "2024-01-12 22:38",
+                         message: "화이팅!!"),
+                    Chat(user: .den,
+                         date: "2024-01-12 23:42",
+                         message: "열심히 하고 있습니다!!"),
+                 ]
+                ),
+        ChatRoom(chatroomId: 11,
+                 chatroomImage: [User.jack.profileImage, User.den.profileImage],
+                 chatroomName: "도봉 멘토방 남으세요",
+                 chatList: [
+                    Chat(user: .hue,
+                         date: "2024-01-12 21:30",
+                         message: "열심히 일 하시고 계시는거죠?"),
+                    Chat(user: .bran,
+                         date: "2024-01-12 22:32",
+                         message: "도봉 캠퍼스 가고싶어요..."),
+                    Chat(user: .jack,
+                         date: "2024-01-12 22:38",
+                         message: "화이팅!!"),
+                    Chat(user: .den,
+                         date: "2024-01-12 23:42",
+                         message: "열심히 하고 있습니다!!"),
+                 ]
+                ),
+        ChatRoom(chatroomId: 11,
+                 chatroomImage: [User.jack.profileImage, User.den.profileImage],
+                 chatroomName: "도봉 멘토방 남으세요",
+                 chatList: [
+                    Chat(user: .hue,
+                         date: "2024-01-12 21:30",
+                         message: "열심히 일 하시고 계시는거죠?"),
+                    Chat(user: .bran,
+                         date: "2024-01-12 22:32",
+                         message: "도봉 캠퍼스 가고싶어요..."),
+                    Chat(user: .jack,
+                         date: "2024-01-12 22:38",
+                         message: "화이팅!!"),
+                    Chat(user: .den,
+                         date: "2024-01-12 23:42",
+                         message: "열심히 하고 있습니다!!"),
+                 ]
+                ),
+        ChatRoom(chatroomId: 11,
+                 chatroomImage: [User.jack.profileImage, User.den.profileImage],
+                 chatroomName: "도봉 멘토방 남으세요",
+                 chatList: [
+                    Chat(user: .hue,
+                         date: "2024-01-12 21:30",
+                         message: "열심히 일 하시고 계시는거죠?"),
+                    Chat(user: .bran,
+                         date: "2024-01-12 22:32",
+                         message: "도봉 캠퍼스 가고싶어요..."),
+                    Chat(user: .jack,
+                         date: "2024-01-12 22:38",
+                         message: "화이팅!!"),
+                    Chat(user: .den,
+                         date: "2024-01-12 23:42",
+                         message: "열심히 하고 있습니다!!"),
+                 ]
+                ), 
     ]
 }

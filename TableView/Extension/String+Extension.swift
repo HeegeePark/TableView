@@ -8,9 +8,9 @@
 import UIKit
 
 extension String {
-    func toDate() -> Date? {
+    func toDate(format: String = "yyMMdd") -> Date? {
         let dateFomatter = DateFormatter()
-        dateFomatter.dateFormat = "yyMMdd"
+        dateFomatter.dateFormat = format
         
         return dateFomatter.date(from: self)
     }
