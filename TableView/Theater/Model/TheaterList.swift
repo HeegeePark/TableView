@@ -17,22 +17,4 @@ struct TheaterList {
         Theater(type: "CGV", location: "CGV 영등포", latitude: 37.52666023337906, longitude: 126.9258351013706),
         Theater(type: "CGV", location: "CGV 용산 아이파크몰", latitude: 37.53149302830903, longitude: 126.9654030486416)
     ]
-    
-    static var mapAnnotationsCount: Int {
-        return TheaterList.mapAnnotations.count
-    }
-    
-    // annotation들의 center region
-    static var centerRegion: MKCoordinateRegion {
-        
-        let latitudeCenter = mapAnnotations.map { $0.latitude }.reduce(0, +) / Double(mapAnnotationsCount)
-        let longitudeCenter = mapAnnotations.map { $0.longitude }.reduce(0, +) / Double(mapAnnotationsCount)
-        
-        let coordinate = CLLocationCoordinate2D(latitude: latitudeCenter, longitude: longitudeCenter)
-        
-        // 영역을 확대 및 축소 (값이 낮을수록 화면 확대/높으면 축소)
-        let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
-        
-        return MKCoordinateRegion(center: coordinate, span: span)
-    }
 }

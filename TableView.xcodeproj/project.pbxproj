@@ -55,6 +55,7 @@
 		4F4DCB5C2B55681D004C644D /* TheaterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB5B2B55681D004C644D /* TheaterList.swift */; };
 		4F4DCB5E2B5569AA004C644D /* Theater.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DCB5D2B5569AA004C644D /* Theater.storyboard */; };
 		4F4DCB602B5569C1004C644D /* TheaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB5F2B5569C1004C644D /* TheaterViewController.swift */; };
+		4F4DCB622B558167004C644D /* TheaterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB612B558167004C644D /* TheaterType.swift */; };
 		4F7F30942B481F5500A28267 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30932B481F5500A28267 /* AppDelegate.swift */; };
 		4F7F30962B481F5500A28267 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30952B481F5500A28267 /* SceneDelegate.swift */; };
 		4F7F30982B481F5500A28267 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30972B481F5500A28267 /* ViewController.swift */; };
@@ -119,6 +120,7 @@
 		4F4DCB5B2B55681D004C644D /* TheaterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterList.swift; sourceTree = "<group>"; };
 		4F4DCB5D2B5569AA004C644D /* Theater.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Theater.storyboard; sourceTree = "<group>"; };
 		4F4DCB5F2B5569C1004C644D /* TheaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterViewController.swift; sourceTree = "<group>"; };
+		4F4DCB612B558167004C644D /* TheaterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterType.swift; sourceTree = "<group>"; };
 		4F7F30902B481F5500A28267 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7F30932B481F5500A28267 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F7F30952B481F5500A28267 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			children = (
 				4F4DCB592B55680F004C644D /* Theater.swift */,
 				4F4DCB5B2B55681D004C644D /* TheaterList.swift */,
+				4F4DCB612B558167004C644D /* TheaterType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				4F10DADA2B4FDA4A00D58A09 /* Travel.swift in Sources */,
 				4F10DADC2B4FE05D00D58A09 /* CityDetailViewController.swift in Sources */,
 				4F10DB0F2B51364C00D58A09 /* ChatReceiverTableViewCell.swift in Sources */,
+				4F4DCB622B558167004C644D /* TheaterType.swift in Sources */,
 				4FA0976C2B4C747700E84B79 /* MagazineTableViewController.swift in Sources */,
 				4F49DAC32B4D35A4005B0C1D /* City.swift in Sources */,
 				4F49DAE92B4EA63E005B0C1D /* Date+Extension.swift in Sources */,
