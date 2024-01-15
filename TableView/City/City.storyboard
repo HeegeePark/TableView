@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8bY-bG-LoN">
-                                <rect key="frame" x="20" y="123" width="353" height="31"/>
+                                <rect key="frame" x="20" y="59" width="353" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="C4w-pf-SFy"/>
                                 </constraints>
@@ -29,7 +29,7 @@
                                 </segments>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zJ4-0s-OOF">
-                                <rect key="frame" x="0.0" y="161" width="393" height="657"/>
+                                <rect key="frame" x="0.0" y="97" width="393" height="721"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FTj-SG-5rv">
                                     <size key="itemSize" width="128" height="128"/>
@@ -48,13 +48,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Nfy-iX-SmC">
-                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Pkq-8E-rvR" id="e0V-Wg-hbk"/>
-                                </connections>
-                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kRA-ZI-POc"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,21 +55,17 @@
                         <constraints>
                             <constraint firstItem="8bY-bG-LoN" firstAttribute="leading" secondItem="kRA-ZI-POc" secondAttribute="leading" constant="20" id="4iG-cu-wGd"/>
                             <constraint firstItem="zJ4-0s-OOF" firstAttribute="leading" secondItem="kRA-ZI-POc" secondAttribute="leading" id="C6J-cL-IFt"/>
-                            <constraint firstItem="Nfy-iX-SmC" firstAttribute="top" secondItem="kRA-ZI-POc" secondAttribute="top" id="Jt9-jH-ooS"/>
-                            <constraint firstItem="Nfy-iX-SmC" firstAttribute="leading" secondItem="kRA-ZI-POc" secondAttribute="leading" id="T0Z-og-nr9"/>
-                            <constraint firstItem="Nfy-iX-SmC" firstAttribute="trailing" secondItem="kRA-ZI-POc" secondAttribute="trailing" id="U1A-4x-pSw"/>
                             <constraint firstItem="kRA-ZI-POc" firstAttribute="trailing" secondItem="8bY-bG-LoN" secondAttribute="trailing" constant="20" id="Ykg-pF-Gmc"/>
                             <constraint firstItem="kRA-ZI-POc" firstAttribute="bottom" secondItem="zJ4-0s-OOF" secondAttribute="bottom" id="Ze7-8t-lL4"/>
+                            <constraint firstItem="8bY-bG-LoN" firstAttribute="top" secondItem="kRA-ZI-POc" secondAttribute="top" id="haH-pZ-LwG"/>
                             <constraint firstItem="zJ4-0s-OOF" firstAttribute="trailing" secondItem="kRA-ZI-POc" secondAttribute="trailing" id="ice-Cf-ldT"/>
                             <constraint firstItem="zJ4-0s-OOF" firstAttribute="top" secondItem="8bY-bG-LoN" secondAttribute="bottom" constant="8" symbolic="YES" id="xe8-8T-Hzq"/>
-                            <constraint firstItem="8bY-bG-LoN" firstAttribute="top" secondItem="Nfy-iX-SmC" secondAttribute="bottom" constant="8" id="z7d-jy-Y2X"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="인기 도시" id="ula-wx-56m"/>
                     <connections>
                         <outlet property="citySegmentControl" destination="8bY-bG-LoN" id="3m9-31-cmh"/>
                         <outlet property="collectionView" destination="zJ4-0s-OOF" id="BcV-Ru-AH8"/>
-                        <outlet property="searchBar" destination="Nfy-iX-SmC" id="k4h-t6-MFU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERH-kh-Pnx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -181,7 +170,6 @@
         <!--Navigation Controller-->
         <scene sceneID="tzy-Tq-zIg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hXf-Y2-nAW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q36-Ny-RZv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GAb-l0-sNL">
@@ -194,6 +182,7 @@
                         <segue destination="Ien-KL-SFA" kind="relationship" relationship="rootViewController" id="p13-un-fge"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXf-Y2-nAW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3522.9007633587785" y="2481.6901408450703"/>
         </scene>

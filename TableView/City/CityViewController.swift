@@ -26,13 +26,13 @@ enum CityType: String, CaseIterable {
 }
 
 class CityViewController: UIViewController {
-
     @IBOutlet var citySegmentControl: UISegmentedControl!
     @IBOutlet var collectionView: UICollectionView!
-    @IBOutlet var searchBar: UISearchBar!
+    
+    lazy var searchController = navigationItem.searchController
     
     var cityType: CityType = .all
-    var cityList: [City] = [] {
+    lazy var cityList: [City] = self.cityType.cityList {
         didSet {
             collectionView.reloadData()
         }
@@ -41,9 +41,7 @@ class CityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cityList = self.cityType.cityList
-        
-        setSearchBar()
+        configureNavigationBar()
         configureCollectionView()
         setSegmentControl()
     }
@@ -51,7 +49,7 @@ class CityViewController: UIViewController {
     // segmentedControl 값 변경 시
     @objc func segmentChanged(_ sender: UISegmentedControl) {
         cityType = CityType.allCases[sender.selectedSegmentIndex]
-        searchBar(searchBar, textDidChange: searchBar.text ?? "")
+        updateSearchResults(for: searchController!)
     }
 }
 
@@ -59,9 +57,15 @@ class CityViewController: UIViewController {
 extension CityViewController: CustomViewControllerProtocol, UICollectionViewControllerProtocol {
     func setupUI() {}
     
-    func setSearchBar() {
-        searchBar.placeholder = "가고 싶은 도시를 입력해주세요"
-        searchBar.delegate = self
+    func configureNavigationBar() {
+        navigationItem.title = "인기 도시"
+        configureSearchController()
+    }
+    
+    func configureSearchController() {
+        let searchController = UISearchController(searchResultsController: nil)
+        navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
     }
     
     func configureCollectionView() {
@@ -109,7 +113,7 @@ extension CityViewController: UICollectionViewDataSource, UICollectionViewDelega
         let city = cityList[indexPath.item]
         
         cell.bindItem(data: city)
-        cell.changeColorBySearchKeyword(searchBar.text)
+        cell.changeColorBySearchKeyword(searchController?.searchBar.text)
         
         return cell
     }
@@ -122,29 +126,22 @@ extension CityViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
 }
 
-// MARK: - UISearchBarDelegate
-extension CityViewController: UISearchBarDelegate {
-    // 텍스트가 바뀔 때
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+// MARK: - UISearchResultsUpdating
+
+extension CityViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
         // text empty 바인딩
-        guard !searchText.isEmpty else {
+        guard let text = searchController.searchBar.text, !text.isEmpty else {
             cityList = cityType.cityList
             return
         }
         
-        // whitespace & 소문자화
-        let refinedText = searchText.refineForSearch
+        let refinedText = text.refineForSearch
         
-        // list 셋업
         cityList = cityType.cityList.filter { city in
             return city.name.contains(refinedText) ||
             city.englishName.lowercased().contains(refinedText) ||
             city.explain.contains(refinedText)
         }
-    }
-    
-    // search 버튼 클릭 시
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
     }
 }
