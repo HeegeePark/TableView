@@ -389,11 +389,11 @@
             </objects>
             <point key="canvasLocation" x="2057.2519083969464" y="290.84507042253523"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Shopping-->
         <scene sceneID="Cdm-Pr-gwM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OpS-nZ-qRZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="cart" catalog="system" selectedImage="cart.fill" id="9Sc-Ez-ZNc"/>
+                    <tabBarItem key="tabBarItem" title="Shopping" image="cart" catalog="system" selectedImage="cart.fill" id="9Sc-Ez-ZNc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Sy-gn-OhV">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -428,17 +428,18 @@
                         <segue destination="OYJ-mr-6af" kind="relationship" relationship="viewControllers" id="a7y-Oa-jDt"/>
                         <segue destination="79T-oi-GjQ" kind="relationship" relationship="viewControllers" id="7g5-wL-btd"/>
                         <segue destination="Siw-g4-Kfa" kind="relationship" relationship="viewControllers" id="pMu-wt-cvz"/>
+                        <segue destination="LNW-QQ-kqa" kind="relationship" relationship="viewControllers" id="SKn-ZI-qII"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aym-p6-ADF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865" y="1649"/>
+            <point key="canvasLocation" x="912" y="2370"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Magazine-->
         <scene sceneID="8VQ-gg-ATI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OYJ-mr-6af" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="airplane.circle" catalog="system" selectedImage="airplane.circle.fill" id="YHa-S9-B6B"/>
+                    <tabBarItem key="tabBarItem" title="Magazine" image="airplane.circle" catalog="system" selectedImage="airplane.circle.fill" id="YHa-S9-B6B"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hic-gP-l1A">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -567,11 +568,11 @@
             </objects>
             <point key="canvasLocation" x="3760" y="1649"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--City-->
         <scene sceneID="eaH-hj-nTZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="79T-oi-GjQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="globe.americas" catalog="system" selectedImage="globe.americas.fill" id="Zha-83-08l"/>
+                    <tabBarItem key="tabBarItem" title="City" image="globe.americas" catalog="system" selectedImage="globe.americas.fill" id="Zha-83-08l"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Px9-lE-iPg">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -608,7 +609,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90U-gV-nVj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3042" y="3063"/>
+            <point key="canvasLocation" x="3036" y="3144"/>
         </scene>
         <!--Chat-->
         <scene sceneID="s1w-Iu-BjV">
@@ -627,7 +628,36 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xjc-0R-ICB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2059" y="3063"/>
+            <point key="canvasLocation" x="2085" y="3144"/>
+        </scene>
+        <!--Theater-->
+        <scene sceneID="hvV-Wa-GBl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Theater" id="58j-hc-qxF" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9JL-Kx-rWO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2y2-oq-JMw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3014" y="3869"/>
+        </scene>
+        <!--Theater-->
+        <scene sceneID="4MT-41-W2d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LNW-QQ-kqa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Theater" image="theatermasks" catalog="system" selectedImage="theatermasks.fill" id="zad-eu-DuF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8wy-Ob-RS1">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="58j-hc-qxF" kind="relationship" relationship="rootViewController" id="aCB-jv-g3C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VyC-f1-2Ei" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2085" y="3869"/>
         </scene>
     </scenes>
     <resources>
@@ -646,6 +676,8 @@
         <image name="moon" catalog="system" width="128" height="123"/>
         <image name="moon.fill" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="theatermasks" catalog="system" width="128" height="87"/>
+        <image name="theatermasks.fill" catalog="system" width="128" height="91"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

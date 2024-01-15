@@ -53,6 +53,8 @@
 		4F4DCB562B553197004C644D /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB552B553197004C644D /* UICollectionViewCell+Extension.swift */; };
 		4F4DCB5A2B55680F004C644D /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB592B55680F004C644D /* Theater.swift */; };
 		4F4DCB5C2B55681D004C644D /* TheaterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB5B2B55681D004C644D /* TheaterList.swift */; };
+		4F4DCB5E2B5569AA004C644D /* Theater.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DCB5D2B5569AA004C644D /* Theater.storyboard */; };
+		4F4DCB602B5569C1004C644D /* TheaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB5F2B5569C1004C644D /* TheaterViewController.swift */; };
 		4F7F30942B481F5500A28267 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30932B481F5500A28267 /* AppDelegate.swift */; };
 		4F7F30962B481F5500A28267 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30952B481F5500A28267 /* SceneDelegate.swift */; };
 		4F7F30982B481F5500A28267 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30972B481F5500A28267 /* ViewController.swift */; };
@@ -115,6 +117,8 @@
 		4F4DCB552B553197004C644D /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		4F4DCB592B55680F004C644D /* Theater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theater.swift; sourceTree = "<group>"; };
 		4F4DCB5B2B55681D004C644D /* TheaterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterList.swift; sourceTree = "<group>"; };
+		4F4DCB5D2B5569AA004C644D /* Theater.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Theater.storyboard; sourceTree = "<group>"; };
+		4F4DCB5F2B5569C1004C644D /* TheaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterViewController.swift; sourceTree = "<group>"; };
 		4F7F30902B481F5500A28267 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7F30932B481F5500A28267 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F7F30952B481F5500A28267 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -289,6 +293,8 @@
 			isa = PBXGroup;
 			children = (
 				4F4DCB582B556805004C644D /* Model */,
+				4F4DCB5D2B5569AA004C644D /* Theater.storyboard */,
+				4F4DCB5F2B5569C1004C644D /* TheaterViewController.swift */,
 			);
 			path = Theater;
 			sourceTree = "<group>";
@@ -414,6 +420,7 @@
 				4F10DAED2B4FE67D00D58A09 /* ADTableViewCell.xib in Resources */,
 				4F10DB102B51364C00D58A09 /* ChatReceiverTableViewCell.xib in Resources */,
 				4F10DB012B5133CD00D58A09 /* Chat.storyboard in Resources */,
+				4F4DCB5E2B5569AA004C644D /* Theater.storyboard in Resources */,
 				4F49DAC92B4D3915005B0C1D /* CityCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +464,7 @@
 				4F10DADE2B4FE09900D58A09 /* ADViewController.swift in Sources */,
 				4FA097682B4C66E300E84B79 /* UserDefaults.swift in Sources */,
 				4F7F30942B481F5500A28267 /* AppDelegate.swift in Sources */,
+				4F4DCB602B5569C1004C644D /* TheaterViewController.swift in Sources */,
 				4F4DCB562B553197004C644D /* UICollectionViewCell+Extension.swift in Sources */,
 				4F10DAEF2B50870600D58A09 /* Int+Extension.swift in Sources */,
 				4F10DAF12B50975D00D58A09 /* CustomViewControllerProtocol.swift in Sources */,

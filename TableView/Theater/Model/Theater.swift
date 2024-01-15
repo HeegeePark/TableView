@@ -6,13 +6,22 @@
 //
 
 import Foundation
-
-// Theater(type: "롯데시네마", location: "롯데시네마 서울대입구", latitude: 37.4824761978647, longitude: 126.9521680487202),
+import MapKit
 
 struct Theater {
     let type: String
     let location: String
     let latitude: Double
     let longitude: Double
+    
+    var annotation: MKPointAnnotation {
+        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinate
+        annotation.title = location
+        
+        return annotation
+    }
 }
 
