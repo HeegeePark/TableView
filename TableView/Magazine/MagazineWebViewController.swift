@@ -6,24 +6,44 @@
 //
 
 import UIKit
+import WebKit
 
 class MagazineWebViewController: UIViewController {
-
+    @IBOutlet var webView: WKWebView!
+    
+    var magazine: Magazine?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setupUI()
+        configureNavigationBar()
+        loadWebViw()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func bindItem(data: Magazine) {
+        magazine = data
     }
-    */
+    
+    func loadWebViw() {
+        guard let magazine else { return }
+        let request = URLRequest(url: magazine.linkURL)
+        
+        webView.load(request)
+    }
+    
+    @objc func popButtonTapped() {
+        navigationController?.popViewController(animated: true)
+    }
+}
 
+extension MagazineWebViewController: CustomViewControllerProtocol {
+    func setupUI() {}
+    
+    func configureNavigationBar() {
+        navigationItem.title = magazine?.title
+        
+        let leftButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(popButtonTapped))
+        navigationItem.leftBarButtonItem = leftButton
+    }
 }

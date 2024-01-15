@@ -534,6 +534,40 @@
             </objects>
             <point key="canvasLocation" x="2893.8931297709923" y="1648.5915492957747"/>
         </scene>
+        <!--Magazine Web View Controller-->
+        <scene sceneID="vbw-Fs-X3g">
+            <objects>
+                <viewController storyboardIdentifier="MagazineWebViewController" id="8jX-31-6f2" customClass="MagazineWebViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XOr-Zz-Kla">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="la9-Wj-7IY">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7OQ-TM-XDW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="la9-Wj-7IY" firstAttribute="top" secondItem="7OQ-TM-XDW" secondAttribute="top" id="SCp-KF-1x4"/>
+                            <constraint firstItem="la9-Wj-7IY" firstAttribute="leading" secondItem="7OQ-TM-XDW" secondAttribute="leading" id="aUS-5B-q5N"/>
+                            <constraint firstItem="7OQ-TM-XDW" firstAttribute="trailing" secondItem="la9-Wj-7IY" secondAttribute="trailing" id="dMV-hg-1Es"/>
+                            <constraint firstItem="7OQ-TM-XDW" firstAttribute="bottom" secondItem="la9-Wj-7IY" secondAttribute="bottom" id="yi5-wG-9yN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="la9-Wj-7IY" id="fMA-24-MAi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Yf-63-Fwd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3760" y="1649"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="eaH-hj-nTZ">
             <objects>

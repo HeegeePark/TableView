@@ -45,7 +45,14 @@ extension MagazineTableViewController {
         return cell
     }
     
+    // 셀 클릭 시, 메거진 링크 웹 뷰로 이동
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let magazine = list[indexPath.row]
         
+        let vc = storyboard?.instantiateViewController(withIdentifier: MagazineWebViewController.identifier) as! MagazineWebViewController
+        
+        vc.bindItem(data: magazine)
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
