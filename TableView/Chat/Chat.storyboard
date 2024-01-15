@@ -76,8 +76,8 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="93r-1z-3Kw" secondAttribute="height" multiplier="1:1" id="eAc-rs-fYB"/>
                                         </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -95,6 +95,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="thA-go-Nfa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="FAx-Nt-cDx" firstAttribute="top" secondItem="thA-go-Nfa" secondAttribute="top" id="0Bc-Re-MV0"/>
                             <constraint firstItem="dzJ-7G-Shj" firstAttribute="trailing" secondItem="thA-go-Nfa" secondAttribute="trailing" id="bDy-ox-5hJ"/>
@@ -104,15 +105,24 @@
                             <constraint firstItem="dzJ-7G-Shj" firstAttribute="top" secondItem="FAx-Nt-cDx" secondAttribute="bottom" id="lm9-Uf-S3A"/>
                             <constraint firstItem="FAx-Nt-cDx" firstAttribute="leading" secondItem="thA-go-Nfa" secondAttribute="leading" id="vqw-N8-gdb"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="3ga-Ze-7q7" appends="YES" id="fi8-et-gtl"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="inputAreaView" destination="dzJ-7G-Shj" id="HNH-7v-Ame"/>
+                        <outlet property="inputAreaViewBottomMargin" destination="dE5-9X-npF" id="jud-3F-khh"/>
                         <outlet property="inputTextButton" destination="93r-1z-3Kw" id="qFF-0c-0We"/>
                         <outlet property="inputTextView" destination="nW8-DT-HP8" id="uSh-CR-sDl"/>
                         <outlet property="tableView" destination="FAx-Nt-cDx" id="tAq-cV-a6A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Yl-IH-1Nk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3ga-Ze-7q7">
+                    <connections>
+                        <action selector="keyboardDismiss:" destination="HGf-qt-rqe" id="QS0-aZ-30H"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="956.48854961832058" y="4.9295774647887329"/>
         </scene>

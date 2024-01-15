@@ -16,6 +16,7 @@ class ChatViewController: UIViewController {
     @IBOutlet var inputTextView: UITextView!
     @IBOutlet var inputTextButton: UIButton!
     
+    @IBOutlet var inputAreaViewBottomMargin: NSLayoutConstraint!
     
     var chatRoom: ChatRoom?
 
@@ -28,12 +29,12 @@ class ChatViewController: UIViewController {
         scrollToBottom()
     }
     
-    func updateData(data: ChatRoom) {
-        self.chatRoom = data
+    override func viewWillAppear(_ animated: Bool) {
+        initNotification()
     }
     
-    @objc func popButtonTapped() {
-        navigationController?.popViewController(animated: true)
+    func updateData(data: ChatRoom) {
+        self.chatRoom = data
     }
     
     func scrollToBottom() {
@@ -42,14 +43,67 @@ class ChatViewController: UIViewController {
             self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
         }
     }
-
+    
+    @objc func popButtonTapped() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func keyboardDismiss(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    // 키보드 올라올 때
+    // TODO: 채팅 화면도 같이 올리는 법 고민해볼 것.
+    @objc func keyboardWillShow(noti: Notification) {
+        let notiInfo = noti.userInfo!
+        
+        // 키보드 높이
+        let keyboardFrame = notiInfo[UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
+        let height = keyboardFrame.size.height - self.view.safeAreaInsets.bottom
+        
+        inputAreaViewBottomMargin.constant = -1 * height
+        
+        let animationDuration = notiInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
+        UIView.animate(withDuration: animationDuration) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    // 키보드 내려갈 때
+    @objc func keyboardWillHide(noti: Notification) {
+        let notiInfo = noti.userInfo!
+        let animationDuration = notiInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
+        self.inputAreaViewBottomMargin.constant = 0
+        
+        UIView.animate(withDuration: animationDuration) {
+            self.view.layoutIfNeeded()
+        }
+    }
 }
 
 // MARK: - Custom UI
 extension ChatViewController: CustomViewControllerProtocol, UITableViewControllerProtocol {
     func setupUI() {
-        // TODO: 채팅 텍스트뷰
-        inputAreaView.backgroundColor = .black
+        // 채팅 텍스트뷰
+        configureTextView()
+        
+        // 전송 버튼
+        // TODO: 버튼 안뜨는거 해결하기.
+        var style = ButtonStyle.default
+//        style.image = UIImage(named: "send")?.withRenderingMode(.alwaysOriginal)
+        style.image = UIImage(systemName: "paperplane")
+        style.tintColor = .gray
+        style.backgroundColor = .blue
+        inputTextButton.setButton(style: .default)
+    }
+    
+    func configureTextView() {
+        inputTextView.setCornerRadius()
+        inputTextView.backgroundColor = #colorLiteral(red: 0.9686273932, green: 0.9686273932, blue: 0.9686273932, alpha: 1)
+        inputTextView.textContainerInset = UIEdgeInsets(top: 16, left: 12, bottom: 16, right: 50)
+        inputTextView.delegate = self
+        inputTextView.textColor = .gray
+        inputTextView.text = "메시지를 입력하세요"
     }
     
     func configureNavigationBar() {
@@ -77,6 +131,12 @@ extension ChatViewController: CustomViewControllerProtocol, UITableViewControlle
     func connectDelegate() {
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    // 키보드 옵저버 등록
+    func initNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(noti:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(noti:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 }
 
@@ -107,6 +167,25 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             
             return cell
+        }
+    }
+}
+
+extension ChatViewController: UITextViewDelegate {
+    // 텍스트 커서가 없어지는 순간, 편집이 끝났을 때
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "메시지를 입력하세요"
+            textView.textColor = .gray
+        }
+    }
+    
+    // 텍스트 커서가 시작하는 순간, 편집이 시작될 때
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        
+        if textView.textColor == .gray {
+            textView.text = nil
+            textView.textColor = .black
         }
     }
 }
