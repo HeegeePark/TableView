@@ -51,6 +51,8 @@
 		4F4DCB522B552FA3004C644D /* ReusableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB512B552FA3004C644D /* ReusableProtocol.swift */; };
 		4F4DCB542B553105004C644D /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB532B553105004C644D /* UITableViewCell+Extension.swift */; };
 		4F4DCB562B553197004C644D /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB552B553197004C644D /* UICollectionViewCell+Extension.swift */; };
+		4F4DCB5A2B55680F004C644D /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB592B55680F004C644D /* Theater.swift */; };
+		4F4DCB5C2B55681D004C644D /* TheaterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB5B2B55681D004C644D /* TheaterList.swift */; };
 		4F7F30942B481F5500A28267 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30932B481F5500A28267 /* AppDelegate.swift */; };
 		4F7F30962B481F5500A28267 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30952B481F5500A28267 /* SceneDelegate.swift */; };
 		4F7F30982B481F5500A28267 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30972B481F5500A28267 /* ViewController.swift */; };
@@ -111,6 +113,8 @@
 		4F4DCB512B552FA3004C644D /* ReusableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableProtocol.swift; sourceTree = "<group>"; };
 		4F4DCB532B553105004C644D /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		4F4DCB552B553197004C644D /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		4F4DCB592B55680F004C644D /* Theater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theater.swift; sourceTree = "<group>"; };
+		4F4DCB5B2B55681D004C644D /* TheaterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterList.swift; sourceTree = "<group>"; };
 		4F7F30902B481F5500A28267 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7F30932B481F5500A28267 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F7F30952B481F5500A28267 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -281,6 +285,23 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		4F4DCB572B5567D1004C644D /* Theater */ = {
+			isa = PBXGroup;
+			children = (
+				4F4DCB582B556805004C644D /* Model */,
+			);
+			path = Theater;
+			sourceTree = "<group>";
+		};
+		4F4DCB582B556805004C644D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F4DCB592B55680F004C644D /* Theater.swift */,
+				4F4DCB5B2B55681D004C644D /* TheaterList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4F7F30872B481F5500A28267 = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +321,7 @@
 		4F7F30922B481F5500A28267 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				4F4DCB572B5567D1004C644D /* Theater */,
 				4F10DAFB2B51317400D58A09 /* Chat */,
 				4F49DAF22B4EC4A0005B0C1D /* Protocol */,
 				4F49DAE22B4E8CD0005B0C1D /* Extension */,
@@ -408,6 +430,7 @@
 				4F4DCB542B553105004C644D /* UITableViewCell+Extension.swift in Sources */,
 				4F49DAC52B4D38F1005B0C1D /* CityViewController.swift in Sources */,
 				4F49DAE72B4E8D74005B0C1D /* UILabel+Extension.swift in Sources */,
+				4F4DCB5C2B55681D004C644D /* TheaterList.swift in Sources */,
 				4F10DADA2B4FDA4A00D58A09 /* Travel.swift in Sources */,
 				4F10DADC2B4FE05D00D58A09 /* CityDetailViewController.swift in Sources */,
 				4F10DB0F2B51364C00D58A09 /* ChatReceiverTableViewCell.swift in Sources */,
@@ -419,6 +442,7 @@
 				4F4DCB522B552FA3004C644D /* ReusableProtocol.swift in Sources */,
 				4F4DCB4C2B552E9A004C644D /* MagazineInfo.swift in Sources */,
 				4FA0976A2B4C6D0C00E84B79 /* Shopping.swift in Sources */,
+				4F4DCB5A2B55680F004C644D /* Theater.swift in Sources */,
 				4FA0976E2B4C748B00E84B79 /* MagazineTableViewCell.swift in Sources */,
 				4F10DAFF2B51322600D58A09 /* Chat.swift in Sources */,
 				4F4DCB502B552F80004C644D /* UIViewController+Extension.swift in Sources */,
