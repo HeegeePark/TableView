@@ -17,7 +17,12 @@ extension String {
     }
     
     // whitespace 처리
-    func removeWhitespace() -> String {
+    var removeWhitespace: String {
         return self.replacingOccurrences(of: " ", with: "")
+    }
+    
+    // whitespace & 소문자화
+    var refineForSearch: String {
+        return self.removeWhitespace.lowercased()
     }
 }

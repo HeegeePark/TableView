@@ -26,6 +26,19 @@ extension UILabel {
     func setDateText(data: String) {
         self.text = data.toDate()?.toString()
     }
+    
+    // 검색 키워드 글자 배경색 변경
+    func changeBackgroundColorBySearchKeyword(keyword: String, color: UIColor) {
+        guard let text = text?.lowercased() else { return }
+        let attributedString = NSMutableAttributedString(string: text)
+        
+        text.matches(of: keyword).forEach {
+            attributedString.addAttribute(.backgroundColor, value: color,
+                                          range: NSRange($0.range, in: text))
+        }
+        
+        self.attributedText = attributedString
+    }
 }
 
 struct LabelStyle {

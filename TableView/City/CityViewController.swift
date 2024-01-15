@@ -109,6 +109,7 @@ extension CityViewController: UICollectionViewDataSource, UICollectionViewDelega
         let city = cityList[indexPath.item]
         
         cell.bindItem(data: city)
+        cell.changeColorBySearchKeyword(searchBar.text)
         
         return cell
     }
@@ -132,7 +133,7 @@ extension CityViewController: UISearchBarDelegate {
         }
         
         // whitespace & 소문자화
-        let refinedText = searchText.removeWhitespace().lowercased()
+        let refinedText = searchText.refineForSearch
         
         // list 셋업
         cityList = cityType.cityList.filter { city in

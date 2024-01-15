@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RegexBuilder
 
 class CityCollectionViewCell: UICollectionViewCell {
 
@@ -51,5 +52,14 @@ extension CityCollectionViewCell: UICollectionViewCellProtocol {
         imageView.kf.setImage(with: url!)
         nameLabel.text = city.name + " | " + city.englishName
         explainLabel.text = city.explain
+    }
+    
+    // 검색 키워드 글자 배경색 변경
+    func changeColorBySearchKeyword(_ keyword: String?) {
+        guard let keyword = keyword?.refineForSearch else { return }
+        
+        for label in [nameLabel, explainLabel] {
+            label?.changeBackgroundColorBySearchKeyword(keyword: keyword, color: .yellow)
+        }
     }
 }
