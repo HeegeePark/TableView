@@ -48,6 +48,10 @@ struct ChatRoom {
             .toString(format: "yy.MM.dd") ?? "알 수 없음."
     }
     
+    var userList: [String] {
+        return self.chatroomImage
+    }
+    
     var lastChatRow: Int {    // 마지막 채팅 row
         return self.chatList.count - 1
     }
