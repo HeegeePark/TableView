@@ -424,16 +424,15 @@
                         <color key="selectedImageTintColor" systemColor="systemGreenColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="q7A-R7-Nfi" kind="relationship" relationship="viewControllers" id="wv2-yb-uhl"/>
-                        <segue destination="8qx-iv-Yas" kind="relationship" relationship="viewControllers" id="BAw-1u-83k"/>
                         <segue destination="OpS-nZ-qRZ" kind="relationship" relationship="viewControllers" id="whA-ST-4d1"/>
                         <segue destination="OYJ-mr-6af" kind="relationship" relationship="viewControllers" id="a7y-Oa-jDt"/>
                         <segue destination="79T-oi-GjQ" kind="relationship" relationship="viewControllers" id="7g5-wL-btd"/>
+                        <segue destination="Siw-g4-Kfa" kind="relationship" relationship="viewControllers" id="pMu-wt-cvz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aym-p6-ADF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1018" y="291"/>
+            <point key="canvasLocation" x="865" y="1649"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8VQ-gg-ATI">
@@ -589,7 +588,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ene-4O-w4A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1384" y="2475"/>
+            <point key="canvasLocation" x="2059" y="2370"/>
         </scene>
         <!--City-->
         <scene sceneID="3NK-5H-cbG">
@@ -599,7 +598,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JSn-6W-pwP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2775" y="2504"/>
+            <point key="canvasLocation" x="3039" y="2377"/>
         </scene>
         <!--Chat-->
         <scene sceneID="UXq-UD-6HP">
@@ -609,12 +608,13 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90U-gV-nVj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2720" y="3251"/>
+            <point key="canvasLocation" x="3042" y="3063"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Chat-->
         <scene sceneID="s1w-Iu-BjV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Siw-g4-Kfa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chat" image="bubble" catalog="system" selectedImage="bubble.fill" id="I53-Xf-iBU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kQn-zL-UIm">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -627,13 +627,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xjc-0R-ICB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1405" y="3251"/>
+            <point key="canvasLocation" x="2059" y="3063"/>
         </scene>
     </scenes>
     <resources>
         <image name="airplane.circle" catalog="system" width="128" height="123"/>
         <image name="airplane.circle.fill" catalog="system" width="128" height="123"/>
         <image name="bed.double.fill" catalog="system" width="128" height="82"/>
+        <image name="bubble" catalog="system" width="128" height="110"/>
+        <image name="bubble.fill" catalog="system" width="128" height="110"/>
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
