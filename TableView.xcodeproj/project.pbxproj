@@ -45,6 +45,12 @@
 		4F4DCB3C2B54192E004C644D /* ChatUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB3A2B54192E004C644D /* ChatUserTableViewCell.swift */; };
 		4F4DCB3D2B54192E004C644D /* ChatUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DCB3B2B54192E004C644D /* ChatUserTableViewCell.xib */; };
 		4F4DCB3F2B54970D004C644D /* BubbleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB3E2B54970D004C644D /* BubbleLabel.swift */; };
+		4F4DCB4C2B552E9A004C644D /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB4B2B552E9A004C644D /* MagazineInfo.swift */; };
+		4F4DCB4E2B552F11004C644D /* MagazineWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB4D2B552F11004C644D /* MagazineWebViewController.swift */; };
+		4F4DCB502B552F80004C644D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB4F2B552F80004C644D /* UIViewController+Extension.swift */; };
+		4F4DCB522B552FA3004C644D /* ReusableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB512B552FA3004C644D /* ReusableProtocol.swift */; };
+		4F4DCB542B553105004C644D /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB532B553105004C644D /* UITableViewCell+Extension.swift */; };
+		4F4DCB562B553197004C644D /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DCB552B553197004C644D /* UICollectionViewCell+Extension.swift */; };
 		4F7F30942B481F5500A28267 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30932B481F5500A28267 /* AppDelegate.swift */; };
 		4F7F30962B481F5500A28267 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30952B481F5500A28267 /* SceneDelegate.swift */; };
 		4F7F30982B481F5500A28267 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30972B481F5500A28267 /* ViewController.swift */; };
@@ -56,8 +62,8 @@
 		4F7F30AC2B49177D00A28267 /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F30AB2B49177D00A28267 /* ShoppingTableViewController.swift */; };
 		4FA097682B4C66E300E84B79 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA097672B4C66E300E84B79 /* UserDefaults.swift */; };
 		4FA0976A2B4C6D0C00E84B79 /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA097692B4C6D0C00E84B79 /* Shopping.swift */; };
-		4FA0976C2B4C747700E84B79 /* TravelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA0976B2B4C747700E84B79 /* TravelTableViewController.swift */; };
-		4FA0976E2B4C748B00E84B79 /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA0976D2B4C748B00E84B79 /* TravelTableViewCell.swift */; };
+		4FA0976C2B4C747700E84B79 /* MagazineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA0976B2B4C747700E84B79 /* MagazineTableViewController.swift */; };
+		4FA0976E2B4C748B00E84B79 /* MagazineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA0976D2B4C748B00E84B79 /* MagazineTableViewCell.swift */; };
 		4FA097702B4C773B00E84B79 /* Magazine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA0976F2B4C773B00E84B79 /* Magazine.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +105,12 @@
 		4F4DCB3A2B54192E004C644D /* ChatUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUserTableViewCell.swift; sourceTree = "<group>"; };
 		4F4DCB3B2B54192E004C644D /* ChatUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatUserTableViewCell.xib; sourceTree = "<group>"; };
 		4F4DCB3E2B54970D004C644D /* BubbleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleLabel.swift; sourceTree = "<group>"; };
+		4F4DCB4B2B552E9A004C644D /* MagazineInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
+		4F4DCB4D2B552F11004C644D /* MagazineWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineWebViewController.swift; sourceTree = "<group>"; };
+		4F4DCB4F2B552F80004C644D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		4F4DCB512B552FA3004C644D /* ReusableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableProtocol.swift; sourceTree = "<group>"; };
+		4F4DCB532B553105004C644D /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		4F4DCB552B553197004C644D /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		4F7F30902B481F5500A28267 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7F30932B481F5500A28267 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F7F30952B481F5500A28267 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,8 +124,8 @@
 		4F7F30AB2B49177D00A28267 /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewController.swift; sourceTree = "<group>"; };
 		4FA097672B4C66E300E84B79 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		4FA097692B4C6D0C00E84B79 /* Shopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping.swift; sourceTree = "<group>"; };
-		4FA0976B2B4C747700E84B79 /* TravelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewController.swift; sourceTree = "<group>"; };
-		4FA0976D2B4C748B00E84B79 /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
+		4FA0976B2B4C747700E84B79 /* MagazineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewController.swift; sourceTree = "<group>"; };
+		4FA0976D2B4C748B00E84B79 /* MagazineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewCell.swift; sourceTree = "<group>"; };
 		4FA0976F2B4C773B00E84B79 /* Magazine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magazine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -213,14 +225,16 @@
 			path = Shopping;
 			sourceTree = "<group>";
 		};
-		4F49DAC02B4D3538005B0C1D /* Travel */ = {
+		4F49DAC02B4D3538005B0C1D /* Magazine */ = {
 			isa = PBXGroup;
 			children = (
-				4FA0976B2B4C747700E84B79 /* TravelTableViewController.swift */,
-				4FA0976D2B4C748B00E84B79 /* TravelTableViewCell.swift */,
+				4FA0976B2B4C747700E84B79 /* MagazineTableViewController.swift */,
+				4FA0976D2B4C748B00E84B79 /* MagazineTableViewCell.swift */,
 				4FA0976F2B4C773B00E84B79 /* Magazine.swift */,
+				4F4DCB4B2B552E9A004C644D /* MagazineInfo.swift */,
+				4F4DCB4D2B552F11004C644D /* MagazineWebViewController.swift */,
 			);
-			path = Travel;
+			path = Magazine;
 			sourceTree = "<group>";
 		};
 		4F49DAC12B4D3593005B0C1D /* City */ = {
@@ -247,6 +261,9 @@
 				4F49DAF02B4EB71D005B0C1D /* UIButton+Extension+Extension.swift */,
 				4F333CAF2B4F762800FAA150 /* UICollectionView+Extension.swift */,
 				4F10DAEE2B50870600D58A09 /* Int+Extension.swift */,
+				4F4DCB4F2B552F80004C644D /* UIViewController+Extension.swift */,
+				4F4DCB532B553105004C644D /* UITableViewCell+Extension.swift */,
+				4F4DCB552B553197004C644D /* UICollectionViewCell+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -259,6 +276,7 @@
 				4F10DAF02B50975D00D58A09 /* CustomViewControllerProtocol.swift */,
 				4F10DAF22B5097F800D58A09 /* UITableViewControllerProtocol.swift */,
 				4F10DAF42B5098F700D58A09 /* UICollectionViewControllerProtocol.swift */,
+				4F4DCB512B552FA3004C644D /* ReusableProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -286,7 +304,7 @@
 				4F49DAF22B4EC4A0005B0C1D /* Protocol */,
 				4F49DAE22B4E8CD0005B0C1D /* Extension */,
 				4F49DAC12B4D3593005B0C1D /* City */,
-				4F49DAC02B4D3538005B0C1D /* Travel */,
+				4F49DAC02B4D3538005B0C1D /* Magazine */,
 				4F49DABF2B4D351D005B0C1D /* Shopping */,
 				4F7F30932B481F5500A28267 /* AppDelegate.swift */,
 				4F7F30952B481F5500A28267 /* SceneDelegate.swift */,
@@ -387,20 +405,25 @@
 			files = (
 				4F4DCB3F2B54970D004C644D /* BubbleLabel.swift in Sources */,
 				4F7F30A82B482A1100A28267 /* SettingTableViewController.swift in Sources */,
+				4F4DCB542B553105004C644D /* UITableViewCell+Extension.swift in Sources */,
 				4F49DAC52B4D38F1005B0C1D /* CityViewController.swift in Sources */,
 				4F49DAE72B4E8D74005B0C1D /* UILabel+Extension.swift in Sources */,
 				4F10DADA2B4FDA4A00D58A09 /* Travel.swift in Sources */,
 				4F10DADC2B4FE05D00D58A09 /* CityDetailViewController.swift in Sources */,
 				4F10DB0F2B51364C00D58A09 /* ChatReceiverTableViewCell.swift in Sources */,
-				4FA0976C2B4C747700E84B79 /* TravelTableViewController.swift in Sources */,
+				4FA0976C2B4C747700E84B79 /* MagazineTableViewController.swift in Sources */,
 				4F49DAC32B4D35A4005B0C1D /* City.swift in Sources */,
 				4F49DAE92B4EA63E005B0C1D /* Date+Extension.swift in Sources */,
 				4F10DAF32B5097F800D58A09 /* UITableViewControllerProtocol.swift in Sources */,
 				4F49DAF12B4EB71D005B0C1D /* UIButton+Extension+Extension.swift in Sources */,
+				4F4DCB522B552FA3004C644D /* ReusableProtocol.swift in Sources */,
+				4F4DCB4C2B552E9A004C644D /* MagazineInfo.swift in Sources */,
 				4FA0976A2B4C6D0C00E84B79 /* Shopping.swift in Sources */,
-				4FA0976E2B4C748B00E84B79 /* TravelTableViewCell.swift in Sources */,
+				4FA0976E2B4C748B00E84B79 /* MagazineTableViewCell.swift in Sources */,
 				4F10DAFF2B51322600D58A09 /* Chat.swift in Sources */,
+				4F4DCB502B552F80004C644D /* UIViewController+Extension.swift in Sources */,
 				4F49DAEB2B4EA64A005B0C1D /* String+Extension.swift in Sources */,
+				4F4DCB4E2B552F11004C644D /* MagazineWebViewController.swift in Sources */,
 				4F7F30AC2B49177D00A28267 /* ShoppingTableViewController.swift in Sources */,
 				4F49DAC82B4D3915005B0C1D /* CityCollectionViewCell.swift in Sources */,
 				4F49DAF42B4EC4D0005B0C1D /* UICollectionViewCellProtocol.swift in Sources */,
@@ -410,6 +433,7 @@
 				4F10DADE2B4FE09900D58A09 /* ADViewController.swift in Sources */,
 				4FA097682B4C66E300E84B79 /* UserDefaults.swift in Sources */,
 				4F7F30942B481F5500A28267 /* AppDelegate.swift in Sources */,
+				4F4DCB562B553197004C644D /* UICollectionViewCell+Extension.swift in Sources */,
 				4F10DAEF2B50870600D58A09 /* Int+Extension.swift in Sources */,
 				4F10DAF12B50975D00D58A09 /* CustomViewControllerProtocol.swift in Sources */,
 				4F49DAF62B4EC54A005B0C1D /* UITableViewCellProtocol.swift in Sources */,

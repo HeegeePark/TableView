@@ -8,7 +8,6 @@
 import UIKit
 
 class ChatViewController: UIViewController {
-    static let identifier = "ChatViewController"
     
     @IBOutlet var tableView: UITableView!
     

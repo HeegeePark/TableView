@@ -8,7 +8,6 @@
 import UIKit
 
 class SpotTableViewCell: UITableViewCell {
-    static let identifier =  "SpotTableViewCell"
     
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!

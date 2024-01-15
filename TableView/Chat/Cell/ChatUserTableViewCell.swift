@@ -8,7 +8,6 @@
 import UIKit
 
 class ChatUserTableViewCell: UITableViewCell {
-    static let identifier = "ChatUserTableViewCell"
 
     @IBOutlet var bubbleLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!

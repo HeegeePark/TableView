@@ -7,8 +7,8 @@
 
 import UIKit
 
-class TravelTableViewController: UITableViewController {
-    let list = Magazine.getDummy()
+class MagazineTableViewController: UITableViewController {
+    let list = MagazineInfo.magazine
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,7 @@ class TravelTableViewController: UITableViewController {
 }
 
 // MARK: - Custom UI
-extension TravelTableViewController {
+extension MagazineTableViewController {
     func configureTableView() {
         tableView.rowHeight = 460
         tableView.separatorStyle = .none
@@ -26,7 +26,7 @@ extension TravelTableViewController {
 }
 
 // MARK: - UITableView
-extension TravelTableViewController {
+extension MagazineTableViewController {
     // 셀 개수
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
@@ -36,12 +36,16 @@ extension TravelTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let magazine = list[indexPath.row]
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TravelTableViewCell.identifier, for: indexPath) as? TravelTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MagazineTableViewCell.identifier, for: indexPath) as? MagazineTableViewCell else {
             return UITableViewCell()
         }
         
         cell.bindItem(data: magazine)
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }

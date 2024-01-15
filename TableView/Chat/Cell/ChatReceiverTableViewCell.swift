@@ -8,7 +8,6 @@
 import UIKit
 
 class ChatReceiverTableViewCell: UITableViewCell {
-    static let identifier = "ChatReceiverTableViewCell"
 
     @IBOutlet var profileImageView: UIImageView!
     @IBOutlet var nicknameLabel: UILabel!

@@ -13,8 +13,6 @@ class CityCollectionViewCell: UICollectionViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var explainLabel: UILabel!
     
-    static let identifier = "CityCollectionViewCell"
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         configureUI()

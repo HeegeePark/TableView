@@ -8,7 +8,6 @@
 import UIKit
 
 class TravelTalkTableViewCell: UITableViewCell {
-    static let identifier = "TravelTalkTableViewCell"
 
     @IBOutlet var profileView: UIView!
     @IBOutlet var oneProfileImageView: [UIImageView]!

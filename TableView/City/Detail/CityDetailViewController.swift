@@ -24,7 +24,6 @@ enum CellType: CaseIterable {
 }
 
 class CityDetailViewController: UIViewController {
-    static let identifier = "CityDetailViewController"
 
     @IBOutlet var tableView: UITableView!
     

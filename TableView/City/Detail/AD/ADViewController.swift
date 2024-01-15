@@ -8,7 +8,6 @@
 import UIKit
 
 class ADViewController: UIViewController {
-    static let identifier = "ADViewController"
 
     override func viewDidLoad() {
         super.viewDidLoad()

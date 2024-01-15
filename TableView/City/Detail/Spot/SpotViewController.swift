@@ -8,7 +8,6 @@
 import UIKit
 
 class SpotViewController: UIViewController {
-    static let identifier = "SpotViewController"
 
     override func viewDidLoad() {
         super.viewDidLoad()

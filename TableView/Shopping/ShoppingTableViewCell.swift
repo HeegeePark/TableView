@@ -13,8 +13,6 @@ class ShoppingTableViewCell: UITableViewCell {
     @IBOutlet var checkButton: UIButton!
     @IBOutlet var starButton: UIButton!
     
-    static let identifier = "ShoppingTableViewCell"
-    
     var checkButtonTapHadler: (() -> Void)?
     var starButtonTapHadler: (() -> Void)?
     

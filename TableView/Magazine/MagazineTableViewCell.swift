@@ -8,8 +8,7 @@
 import UIKit
 import Kingfisher
 
-class TravelTableViewCell: UITableViewCell {
-    static let identifier = "TravelTableViewCell"
+class MagazineTableViewCell: UITableViewCell {
 
     @IBOutlet var thumbnailImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
@@ -27,7 +26,7 @@ class TravelTableViewCell: UITableViewCell {
     }
 }
 
-extension TravelTableViewCell: UITableViewCellProtocol {
+extension MagazineTableViewCell: UITableViewCellProtocol {
     func configureUI() {
         // 썸네일 이미지 뷰
         thumbnailImageView.contentMode = .scaleAspectFill
