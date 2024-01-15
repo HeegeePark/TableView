@@ -131,20 +131,14 @@ extension CityViewController: UISearchBarDelegate {
             return
         }
         
-        // 띄어쓰기 막기
-        guard !searchText.contains(" ") else {
-            searchBar.text = searchText.replacingOccurrences(of: " ", with: "")
-            return
-        }
-        
-        // 대소문자 제거
-        let lowercasedText = searchText.lowercased()
+        // whitespace & 소문자화
+        let refinedText = searchText.removeWhitespace().lowercased()
         
         // list 셋업
         cityList = cityType.cityList.filter { city in
-            return city.name.contains(lowercasedText) ||
-            city.englishName.lowercased().contains(lowercasedText) ||
-            city.explain.contains(lowercasedText)
+            return city.name.contains(refinedText) ||
+            city.englishName.lowercased().contains(refinedText) ||
+            city.explain.contains(refinedText)
         }
     }
     
