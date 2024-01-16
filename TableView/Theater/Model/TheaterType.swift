@@ -58,14 +58,13 @@ enum TheaterType: String, CaseIterable {
             abs(centerCoordinate.longitude - $0.longitude)
         }.max()!
         
-        return MKCoordinateSpan(latitudeDelta: latitudeDiffMax, longitudeDelta: longitudeDiffMax)
+        return MKCoordinateSpan(latitudeDelta: latitudeDiffMax * 2 + 0.02, longitudeDelta: longitudeDiffMax * 2 + 0.02)
     }
     
     // annotation들의 center region
     var centerRegion: MKCoordinateRegion {
         print(maxDistanceSpan)
         // TODO: 거리 차에 따른 맞춤 span으로 설정하기.
-//        return MKCoordinateRegion(center: centerCoordinate, span: maxDistanceSpan)
-        return MKCoordinateRegion(center: centerCoordinate, span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+        return MKCoordinateRegion(center: centerCoordinate, span: maxDistanceSpan)
     }
 }
