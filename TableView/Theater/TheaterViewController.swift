@@ -41,7 +41,7 @@ class TheaterViewController: UIViewController {
         
         // 모든 annotation clear하고 다시 추가하기
         mapView.removeAnnotations(mapView.annotations)
-        mapView.addAnnotations(theaterList.map { $0.annotation })
+        mapView.addAnnotations(theaterList)
     }
 }
 
@@ -64,7 +64,7 @@ extension TheaterViewController: CustomViewControllerProtocol {
         mapView.delegate = self
         
         mapView.setRegion(type.centerRegion, animated: true)
-        mapView.addAnnotations(theaterList.map { $0.annotation })
+        mapView.addAnnotations(theaterList)
     }
 }
 

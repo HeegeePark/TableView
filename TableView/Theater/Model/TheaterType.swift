@@ -15,7 +15,7 @@ enum TheaterType: String, CaseIterable {
     case all = "전체보기"
     
     // type에 따른 annotation list
-    var mapAnnotations: [Theater] {
+    var theaters: [Theater] {
         let list = TheaterList.mapAnnotations
         switch self {
         case .all:
@@ -31,13 +31,18 @@ enum TheaterType: String, CaseIterable {
     }
     
     var mapAnnotationsCount: Int {
-        return mapAnnotations.count
+        return theaters.count
+    }
+    
+    // MKPointAnnotation list
+    var mapAnnotations: [MKPointAnnotation] {
+        return theaters.map { $0.annotation }
     }
     
     // annotation들의 center coordinate
     var centerCoordinate: CLLocationCoordinate2D {
-        let latitudeCenter = mapAnnotations.map { $0.latitude }.reduce(0, +) / Double(mapAnnotationsCount)
-        let longitudeCenter = mapAnnotations.map { $0.longitude }.reduce(0, +) / Double(mapAnnotationsCount)
+        let latitudeCenter = theaters.map { $0.latitude }.reduce(0, +) / Double(mapAnnotationsCount)
+        let longitudeCenter = theaters.map { $0.longitude }.reduce(0, +) / Double(mapAnnotationsCount)
         
         return CLLocationCoordinate2D(latitude: latitudeCenter, longitude: longitudeCenter)
     }
@@ -45,11 +50,11 @@ enum TheaterType: String, CaseIterable {
     // center coordinate로부터 가장 큰 span
     // 값이 커질수록 지도 축소
     var maxDistanceSpan: MKCoordinateSpan {
-        let latitudeDiffMax = mapAnnotations.map {
+        let latitudeDiffMax = theaters.map {
             abs(centerCoordinate.latitude - $0.latitude)
         }.max()!
         
-        let longitudeDiffMax = mapAnnotations.map {
+        let longitudeDiffMax = theaters.map {
             abs(centerCoordinate.longitude - $0.longitude)
         }.max()!
         
