@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>가까운 영화관을 찾는 데 도움이 됩니다. 현위치 제공에 동의하십니까?</string>
+	<string>가까운 영화관을 찾는 데 도움이 됩니다.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

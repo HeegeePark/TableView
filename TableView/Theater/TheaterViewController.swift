@@ -18,7 +18,8 @@ class TheaterViewController: UIViewController {
     
     var type: TheaterType = .all {
         didSet {
-            reloadMapViewByTheater()
+            //reloadMapViewByTheaters()
+            reloadMapViewByUserCenter()
         }
     }
     
@@ -31,7 +32,9 @@ class TheaterViewController: UIViewController {
     }
     
     var centerRegionByUser: MKCoordinateRegion {
-        return MKCoordinateRegion(center: userCoordinate, latitudinalMeters: 400, longitudinalMeters: 400)
+        // 현위치를 기준으로 영화관들이 다 나오는 span
+        let coordinateSpan = type.maxDistanceSpan(center: userCoordinate)
+        return MKCoordinateRegion(center: userCoordinate, span: coordinateSpan)
     }
     
     override func viewDidLoad() {
@@ -43,10 +46,13 @@ class TheaterViewController: UIViewController {
     
     func reloadMapViewByUserCenter() {
         mapView.setRegion(centerRegionByUser, animated: true)
+        
+        // 모든 annotation clear하고 다시 추가하기
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.addAnnotations(type.mapAnnotations)
     }
     
-    
-    func reloadMapViewByTheater() {
+    func reloadMapViewByTheaters() {
         mapView.setRegion(type.centerRegion, animated: true)
         
         // 모든 annotation clear하고 다시 추가하기
