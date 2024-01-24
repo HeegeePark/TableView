@@ -101,24 +101,21 @@ extension TheaterViewController {
     func handleLocationAuthorization(status: CLAuthorizationStatus) {
         switch status {
         case .notDetermined:
-            print("notDetermined")
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.requestWhenInUseAuthorization()
+            
         case .denied:
-            print("denied")
             self.showLocationSettingAlert()
+            
         case .authorizedWhenInUse:
-            print("whenInUse")
             locationManager.startUpdatingLocation()
+            
         default:
             break
         }
     }
     
-    // TODO: 알럿 익스텐션으로 빼기
     func showLocationSettingAlert() {
-        let alert = UIAlertController(title: "위치 정보 이용", message: "위치 서비스를 사용할 수 없음.", preferredStyle: .alert)
-        
         let goSetting = UIAlertAction(title: "설정 이동", style: .default) { _ in
             
             if let setting = URL(string: UIApplication.openSettingsURLString) {
@@ -128,12 +125,7 @@ extension TheaterViewController {
             }
         }
         
-        let cancel = UIAlertAction(title: "취소", style: .cancel)
-        
-        alert.addAction(goSetting)
-        alert.addAction(cancel)
-        
-        present(alert, animated: true)
+        presentAlert(title: "위치 정보 이용", message: "위치 서비스를 사용할 수 없음.", actions: goSetting, cancelEnabled: true)
     }
 }
 
@@ -149,7 +141,6 @@ extension TheaterViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        // TODO: center region을 새싹으로
         print(#function)
     }
     
