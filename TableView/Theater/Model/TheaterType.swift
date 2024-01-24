@@ -63,8 +63,6 @@ enum TheaterType: String, CaseIterable {
     
     // annotation들의 center region
     var centerRegion: MKCoordinateRegion {
-        print(maxDistanceSpan)
-        // TODO: 거리 차에 따른 맞춤 span으로 설정하기.
         return MKCoordinateRegion(center: centerCoordinate, span: maxDistanceSpan)
     }
 }
