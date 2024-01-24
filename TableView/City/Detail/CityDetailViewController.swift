@@ -38,7 +38,7 @@ class CityDetailViewController: UIViewController {
 // MARK: - Custom UI
 
 extension CityDetailViewController: CustomViewControllerProtocol, UITableViewControllerProtocol {
-    func setupUI() {}
+    func configureView() {}
     
     func configureNavigationBar() {
         navigationItem.title = "도시 상세 정보"

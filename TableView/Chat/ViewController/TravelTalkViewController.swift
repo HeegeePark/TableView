@@ -21,13 +21,13 @@ class TravelTalkViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
+        configureView()
     }
 }
 
 // MARK: - Custom UI
 extension TravelTalkViewController: CustomViewControllerProtocol, UITableViewControllerProtocol {
-    func setupUI() {
+    func configureView() {
         cofigureSearchBar()
         configureNavigationBar()
         configureTableView()

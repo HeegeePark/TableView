@@ -22,7 +22,7 @@ class ShoppingTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        configureView()
     }
     
     // 추가 버튼 클릭 시
@@ -52,7 +52,7 @@ class ShoppingTableViewController: UITableViewController {
 // MARK: - Custom UI
 extension ShoppingTableViewController: CustomViewControllerProtocol {
     // UI 디자인
-    func setupUI() {
+    func configureView() {
         // 테이블뷰
         tableView.backgroundColor = .white
         tableView.separatorColor = .lightGray

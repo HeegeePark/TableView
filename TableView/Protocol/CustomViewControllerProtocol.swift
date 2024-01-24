@@ -9,6 +9,6 @@ import UIKit
 
 @objc
 protocol CustomViewControllerProtocol: AnyObject {
-    func setupUI()
+    func configureView()
     @objc optional func configureNavigationBar()
 }

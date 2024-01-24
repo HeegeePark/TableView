@@ -16,7 +16,7 @@ class MagazineWebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
+        configureView()
         configureNavigationBar()
         loadWebViw()
     }
@@ -38,7 +38,7 @@ class MagazineWebViewController: UIViewController {
 }
 
 extension MagazineWebViewController: CustomViewControllerProtocol {
-    func setupUI() {}
+    func configureView() {}
     
     func configureNavigationBar() {
         navigationItem.title = magazine?.title

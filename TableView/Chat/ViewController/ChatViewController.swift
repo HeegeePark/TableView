@@ -22,7 +22,7 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
+        configureView()
         configureNavigationBar()
         configureTableView()
         scrollToBottom()
@@ -82,7 +82,7 @@ class ChatViewController: UIViewController {
 
 // MARK: - Custom UI
 extension ChatViewController: CustomViewControllerProtocol, UITableViewControllerProtocol {
-    func setupUI() {
+    func configureView() {
         // 채팅 텍스트뷰
         configureTextView()
         

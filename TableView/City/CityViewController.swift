@@ -55,7 +55,7 @@ class CityViewController: UIViewController {
 
 // MARK: - Custom UI 관련
 extension CityViewController: CustomViewControllerProtocol, UICollectionViewControllerProtocol {
-    func setupUI() {}
+    func configureView() {}
     
     func configureNavigationBar() {
         navigationItem.title = "인기 도시"
