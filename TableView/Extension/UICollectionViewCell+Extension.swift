@@ -7,8 +7,4 @@
 
 import UIKit
 
-extension UICollectionViewCell: ReusableProtocol {
-    static var identifier: String {
-        return String(describing: self)
-    }
-}
+extension UICollectionViewCell: ReusableProtocol {}

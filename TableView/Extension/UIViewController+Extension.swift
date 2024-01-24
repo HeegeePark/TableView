@@ -8,9 +8,6 @@
 import UIKit
 
 extension UIViewController: ReusableProtocol {
-    static var identifier: String {
-        return String(describing: self)
-    }
     
     // 알럿 present
     func presentActionSheet(titles: [String], completion: @escaping ((String) -> Void)) {

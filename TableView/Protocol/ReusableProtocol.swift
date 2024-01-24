@@ -10,3 +10,9 @@ import Foundation
 protocol ReusableProtocol {
     static var identifier: String { get }
 }
+
+extension ReusableProtocol {
+    static var identifier: String {
+        return String(describing: self)
+    }
+}
